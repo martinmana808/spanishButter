@@ -331,19 +331,13 @@
             if (cells.length >= 2) {
               const tense = cells[0].textContent.trim();
               if (tense !== 'Infinitive' && tense !== 'Gerund' && tense !== 'Participle') {
-                const conjText = cells[1].textContent.trim();
-                // Handle new format with <br> tags
-                let conjArray;
-                if (conjText.includes('<br>')) {
-                  conjArray = conjText.split('<br>').map(c => c.replace(/<[^>]*>/g, '').trim()).filter(c => c);
-                } else {
-                  conjArray = conjText.split(', ').map(c => c.replace(/<[^>]*>/g, '').trim());
-                }
-
-                conjArray.forEach((fullConj, index) => {
-                  const parts = fullConj.split(' ');
+                // Use the new structure with .conjugation spans
+                const conjugations = cells[1].querySelectorAll('.conjugation');
+                conjugations.forEach((conj, index) => {
+                  const fullText = conj.textContent.trim();
+                  const parts = fullText.split(' ');
                   if (parts.length >= 2) {
-                    const person = parts[0]; // Yo, Vos, Él/Ella, etc.
+                    const person = parts[0]; // yo, vos, él/ella, etc.
                     const verbForm = parts.slice(1).join(' '); // The actual conjugation
                     const options = [verbForm];
                     // Add some common wrong options
