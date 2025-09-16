@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Spanish Butter ♥ - Regular Verbs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/espanol.css">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0f1216">
+</head>
+<body>
+  <div class="desktop-blocker">
+    <p>This page is designed for mobile only. Please view on a phone or resize your window to be narrow.</p>
+  </div>
+
+  <header class="search-header">
+    <div class="search-bar">
+      <input id="searchInput" type="search" placeholder="Search English, Spanish, or Category" autocomplete="off" spellcheck="false" aria-label="Search vocabulary">
+      <button id="clearBtn" aria-label="Clear search">×</button>
+    </div>
+  </header>
+
+  <main id="content" class="content">
+    <div id="noResults" class="no-results" hidden>No matches. Try a different term.</div>
+
+    <section class="categories" id="categories">
+    <nav>
+    <a href="index.html">Words</a>
+    <a href="regular.html">Regular verbs</a>
+    <a href="week1.html">Week 1</a>
+  </nav>
+      <div class="test-section">
+        <button id="startTestBtn" class="test-btn">Take a Test (10 Questions)</button>
+      </div>
+      <details class="category" open>
+        <summary><span class="category-title">Explanation of the Tenses (Quick Guide)</span></summary>
+        <ul class="items">
+          <li><strong>Present</strong> → what happens now or usually.<br>
+            <em>Ex: I speak with my family.</em></li>
+            </br>
+          <li><strong>Preterite (simple past)</strong> → a completed action in the past, one specific moment.<br>
+            <em>Ex: Yesterday I spoke with my aunt.</em></li></br>
+          <li><strong>Imperfect (past)</strong> → a past action that was repeated, habitual, or "in progress."<br>
+            <em>Ex: When I was a child, I used to speak a lot with my grandma.</em></li></br>
+          <li><strong>Conditional</strong> → something hypothetical, what "would" happen.<br>
+            <em>Ex: I would speak if I had time.</em></li></br>
+          <li><strong>Infinitive</strong> → base form of the verb, unconjugated.<br>
+            <em>Ex: to speak = hablar.</em></li></br>
+          <li><strong>Gerund</strong> → the "-ing" form, ongoing action. Always used with <strong>ESTAR</strong>.<br>
+            <em>Ex: Estoy hablando = I am speaking.</em></li></br>
+          <li><strong>Participle</strong> → used in compound tenses with <strong>HABER</strong> or as an adjective.<br>
+            <em>Ex: He hablado = I have spoken.</em></li></br>
+          <li><strong>Simple Future (Periphrastic)</strong> → "going to..." in English. Structure: ir (present) + a + infinitive.<br>
+            <em>Ex: Mañana voy a comprar un auto = Tomorrow I'm going to buy a car.</em></li></br>
+        </ul>
+      </details>
+
+      <details class="category" open>
+        <summary><span class="category-title">HABLAR (to speak, regular -AR verb)</span></summary>
+        <div class="items">
+          <table>
+            <tbody>
+              <tr>
+                <td class="tense-name">Present</td>
+                <td>
+                  <span class="conjugation">yo hablo</span>
+                  <span class="conjugation">vos hablás</span>
+                  <span class="conjugation">él/ella habla</span>
+                  <span class="conjugation">nosotros hablamos</span>
+                  <span class="conjugation">ustedes/ellos hablan</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Preterite</td>
+                <td>
+                  <span class="conjugation">yo hablé</span>
+                  <span class="conjugation">vos hablaste</span>
+                  <span class="conjugation">él/ella habló</span>
+                  <span class="conjugation">nosotros hablamos</span>
+                  <span class="conjugation">ustedes/ellos hablaron</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Imperfect</td>
+                <td>
+                  <span class="conjugation">yo hablaba</span>
+                  <span class="conjugation">vos hablabas</span>
+                  <span class="conjugation">él/ella hablaba</span>
+                  <span class="conjugation">nosotros hablábamos</span>
+                  <span class="conjugation">ustedes/ellos hablaban</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Conditional</td>
+                <td>
+                  <span class="conjugation">yo hablaría</span>
+                  <span class="conjugation">vos hablarías</span>
+                  <span class="conjugation">él/ella hablaría</span>
+                  <span class="conjugation">nosotros hablaríamos</span>
+                  <span class="conjugation">ustedes/ellos hablarían</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Simple Future</td>
+                <td>
+                  <span class="conjugation">yo voy a hablar</span>
+                  <span class="conjugation">vos vas a hablar</span>
+                  <span class="conjugation">él/ella va a hablar</span>
+                  <span class="conjugation">nosotros vamos a hablar</span>
+                  <span class="conjugation">ustedes/ellos van a hablar</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Infinitive</td>
+                <td><span class="conjugation">hablar</span></td>
+              </tr>
+              <tr>
+                <td class="tense-name">Gerund</td>
+                <td>
+                  <span class="conjugation">hablando</span>
+                  <div class="highlight">
+                    <strong>estoy hablando</strong> (I am speaking)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Participle</td>
+                <td>
+                  <span class="conjugation">hablado</span>
+                  <div class="highlight">
+                    <strong>he hablado</strong> (I have spoken)
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <details class="category">
+        <summary><span class="category-title">COMER (to eat, regular -ER verb)</span></summary>
+        <div class="items">
+          <table>
+            <tbody>
+              <tr>
+                <td class="tense-name">Present</td>
+                <td>
+                  <span class="conjugation">yo como</span>
+                  <span class="conjugation">vos comés</span>
+                  <span class="conjugation">él/ella come</span>
+                  <span class="conjugation">nosotros comemos</span>
+                  <span class="conjugation">ustedes/ellos comen</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Preterite</td>
+                <td>
+                  <span class="conjugation">yo comí</span>
+                  <span class="conjugation">vos comiste</span>
+                  <span class="conjugation">él/ella comió</span>
+                  <span class="conjugation">nosotros comimos</span>
+                  <span class="conjugation">ustedes/ellos comieron</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Imperfect</td>
+                <td>
+                  <span class="conjugation">yo comía</span>
+                  <span class="conjugation">vos comías</span>
+                  <span class="conjugation">él/ella comía</span>
+                  <span class="conjugation">nosotros comíamos</span>
+                  <span class="conjugation">ustedes/ellos comían</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Conditional</td>
+                <td>
+                  <span class="conjugation">yo comería</span>
+                  <span class="conjugation">vos comerías</span>
+                  <span class="conjugation">él/ella comería</span>
+                  <span class="conjugation">nosotros comeríamos</span>
+                  <span class="conjugation">ustedes/ellos comerían</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Simple Future</td>
+                <td>
+                  <span class="conjugation">yo voy a comer</span>
+                  <span class="conjugation">vos vas a comer</span>
+                  <span class="conjugation">él/ella va a comer</span>
+                  <span class="conjugation">nosotros vamos a comer</span>
+                  <span class="conjugation">ustedes/ellos van a comer</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Infinitive</td>
+                <td><span class="conjugation">comer</span></td>
+              </tr>
+              <tr>
+                <td class="tense-name">Gerund</td>
+                <td>
+                  <span class="conjugation">comiendo</span>
+                  <div class="highlight">
+                    <strong>estoy comiendo</strong> (I am eating)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Participle</td>
+                <td>
+                  <span class="conjugation">comido</span>
+                  <div class="highlight">
+                    <strong>he comido</strong> (I have eaten)
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <details class="category">
+        <summary><span class="category-title">VIVIR (to live, regular -IR verb)</span></summary>
+        <div class="items">
+          <table>
+            <tbody>
+              <tr>
+                <td class="tense-name">Present</td>
+                <td>
+                  <span class="conjugation">yo vivo</span>
+                  <span class="conjugation">vos vivís</span>
+                  <span class="conjugation">él/ella vive</span>
+                  <span class="conjugation">nosotros vivimos</span>
+                  <span class="conjugation">ustedes/ellos viven</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Preterite</td>
+                <td>
+                  <span class="conjugation">yo viví</span>
+                  <span class="conjugation">vos viviste</span>
+                  <span class="conjugation">él/ella vivió</span>
+                  <span class="conjugation">nosotros vivimos</span>
+                  <span class="conjugation">ustedes/ellos vivieron</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Imperfect</td>
+                <td>
+                  <span class="conjugation">yo vivía</span>
+                  <span class="conjugation">vos vivías</span>
+                  <span class="conjugation">él/ella vivía</span>
+                  <span class="conjugation">nosotros vivíamos</span>
+                  <span class="conjugation">ustedes/ellos vivían</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Conditional</td>
+                <td>
+                  <span class="conjugation">yo viviría</span>
+                  <span class="conjugation">vos vivirías</span>
+                  <span class="conjugation">él/ella viviría</span>
+                  <span class="conjugation">nosotros viviríamos</span>
+                  <span class="conjugation">ustedes/ellos vivirían</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Simple Future</td>
+                <td>
+                  <span class="conjugation">yo voy a vivir</span>
+                  <span class="conjugation">vos vas a vivir</span>
+                  <span class="conjugation">él/ella va a vivir</span>
+                  <span class="conjugation">nosotros vamos a vivir</span>
+                  <span class="conjugation">ustedes/ellos van a vivir</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Infinitive</td>
+                <td><span class="conjugation">vivir</span></td>
+              </tr>
+              <tr>
+                <td class="tense-name">Gerund</td>
+                <td>
+                  <span class="conjugation">viviendo</span>
+                  <div class="highlight">
+                    <strong>estoy viviendo</strong> (I am living)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Participle</td>
+                <td>
+                  <span class="conjugation">vivido</span>
+                  <div class="highlight">
+                    <strong>he vivido</strong> (I have lived)
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <!-- Quiz Modal -->
+  <div id="quizModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="quizContainer">
+        <h2>Spanish Quiz</h2>
+        <div id="questionContainer">
+          <p id="questionText"></p>
+          <div id="optionsContainer"></div>
+        </div>
+        <div id="resultContainer" style="display: none;">
+          <h3>Your Score: <span id="scoreText"></span></h3>
+          <button id="restartBtn">Test Again</button>
+        </div>
+        <button id="nextBtn" style="display: none;">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="js/espanol.js"></script>
+</body>
+</html>

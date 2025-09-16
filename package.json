@@ -1,0 +1,43 @@
+{
+    "name": "stihl-shop-website",
+    "version": "1.0.0",
+    "description": "A modern, responsive website for STIHL Shop Tauranga",
+    "main": "index.html",
+    "scripts": {
+        "build": "lessc styles/main.less styles/main.css",
+        "watch": "chokidar \"styles/**/*.less\" -c \"npm run build\"",
+        "serve": "npx http-server -p 8000 -o",
+        "dev": "npm-run-all --parallel watch serve",
+        "format:html": "prettier --write \"**/*.{html,js,json,md}\"",
+        "format:less": "stylelint \"styles/**/*.less\" --fix",
+        "format": "npm-run-all format:html format:less"
+    },
+    "keywords": [
+        "stihl",
+        "website",
+        "responsive",
+        "less",
+        "javascript"
+    ],
+    "author": "STIHL Shop Tauranga",
+    "license": "MIT",
+    "devDependencies": {
+        "chokidar-cli": "^3.0.0",
+        "less": "^4.2.0",
+        "npm-run-all": "^4.1.5",
+        "postcss-less": "^6.0.0",
+        "prettier": "^3.3.3",
+        "stylelint": "^16.8.1",
+        "stylelint-config-recommended-less": "^3.0.1",
+        "stylelint-less": "^3.0.1"
+    },
+    "dependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/your-username/stihl-shop-website.git"
+    },
+    "bugs": {
+        "url": "https://github.com/your-username/stihl-shop-website/issues"
+    },
+    "homepage": "https://github.com/your-username/stihl-shop-website#readme"
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Week 1 Spanish Learning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/espanol.css">
+  <meta name="theme-color" content="#0f1216">
+</head>
+<body>
+  <div class="desktop-blocker">
+    <p>This page is designed for mobile only. Please view on a phone or resize your window to be narrow.</p>
+  </div>
+
+  <header class="search-header">
+    <div class="search-bar">
+      <input id="searchInput" type="search" placeholder="Search content" autocomplete="off" spellcheck="false" aria-label="Search">
+      <button id="clearBtn" aria-label="Clear search">×</button>
+    </div>
+  </header>
+
+  <main id="content" class="content">
+    <div id="noResults" class="no-results" hidden>No matches. Try a different term.</div>
+
+    <section class="categories" id="categories">
+
+      <!-- Verb Conjugations -->
+      <details class="category" open>
+        <summary><span class="category-title">1. SER (to be – permanent)</span></summary>
+        <div class="items">
+          <table style="width:100%; border-collapse: collapse; font-size: 12px;">
+            <tr><td><strong>Form</strong></td><td><strong>Conjugation</strong></td></tr>
+            <tr><td>Infinitive</td><td>ser</td></tr>
+            <tr><td>Gerund</td><td>siendo</td></tr>
+            <tr><td>Participle</td><td>sido</td></tr>
+            <tr><td>Present</td><td>soy, <strong>sos</strong>, es, somos, son</td></tr>
+            <tr><td>Preterite</td><td>fui, fuiste, fue, fuimos, fueron</td></tr>
+            <tr><td>Imperfect</td><td>era, eras, era, éramos, eran</td></tr>
+            <tr><td>Conditional</td><td>sería, serías, sería, seríamos, serían</td></tr>
+            <tr><td>Simple Future</td><td>seré, serás, será, seremos, serán</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="category" open>
+        <summary><span class="category-title">2. ESTAR (to be – temporary)</span></summary>
+        <div class="items">
+          <table style="width:100%; border-collapse: collapse; font-size: 12px;">
+            <tr><td><strong>Form</strong></td><td><strong>Conjugation</strong></td></tr>
+            <tr><td>Infinitive</td><td>estar</td></tr>
+            <tr><td>Gerund</td><td>estando</td></tr>
+            <tr><td>Participle</td><td>estado</td></tr>
+            <tr><td>Present</td><td>estoy, <strong>estás</strong>, está, estamos, están</td></tr>
+            <tr><td>Preterite</td><td>estuve, estuviste, estuvo, estuvimos, estuvieron</td></tr>
+            <tr><td>Imperfect</td><td>estaba, estabas, estaba, estábamos, estaban</td></tr>
+            <tr><td>Conditional</td><td>estaría, estarías, estaría, estaríamos, estarían</td></tr>
+            <tr><td>Simple Future</td><td>estaré, estarás, estará, estaremos, estarán</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="category" open>
+        <summary><span class="category-title">3. TENER (to have)</span></summary>
+        <div class="items">
+          <table style="width:100%; border-collapse: collapse; font-size: 12px;">
+            <tr><td><strong>Form</strong></td><td><strong>Conjugation</strong></td></tr>
+            <tr><td>Infinitive</td><td>tener</td></tr>
+            <tr><td>Gerund</td><td>tengiendo</td></tr>
+            <tr><td>Participle</td><td>tenido</td></tr>
+            <tr><td>Present</td><td>tengo, <strong>tenés</strong>, tiene, tenemos, tienen</td></tr>
+            <tr><td>Preterite</td><td>tuve, tuviste, tuvo, tuvimos, tuvieron</td></tr>
+            <tr><td>Imperfect</td><td>tenía, tenías, tenía, teníamos, tenían</td></tr>
+            <tr><td>Conditional</td><td>tendría, tendrías, tendría, tendríamos, tendrían</td></tr>
+            <tr><td>Simple Future</td><td>tendré, tendrás, tendrá, tendremos, tendrán</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="category" open>
+        <summary><span class="category-title">4. IR (to go)</span></summary>
+        <div class="items">
+          <table style="width:100%; border-collapse: collapse; font-size: 12px;">
+            <tr><td><strong>Form</strong></td><td><strong>Conjugation</strong></td></tr>
+            <tr><td>Infinitive</td><td>ir</td></tr>
+            <tr><td>Gerund</td><td>yendo</td></tr>
+            <tr><td>Participle</td><td>ido</td></tr>
+            <tr><td>Present</td><td>voy, <strong>vas</strong>, va, vamos, van</td></tr>
+            <tr><td>Preterite</td><td>fui, fuiste, fue, fuimos, fueron</td></tr>
+            <tr><td>Imperfect</td><td>iba, ibas, iba, íbamos, iban</td></tr>
+            <tr><td>Conditional</td><td>iría, irías, iría, iríamos, irían</td></tr>
+            <tr><td>Simple Future</td><td>iré, irás, irá, iremos, irán</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="category" open>
+        <summary><span class="category-title">5. QUERER (to want)</span></summary>
+        <div class="items">
+          <table style="width:100%; border-collapse: collapse; font-size: 12px;">
+            <tr><td><strong>Form</strong></td><td><strong>Conjugation</strong></td></tr>
+            <tr><td>Infinitive</td><td>querer</td></tr>
+            <tr><td>Gerund</td><td>queriendo</td></tr>
+            <tr><td>Participle</td><td>querido</td></tr>
+            <tr><td>Present</td><td>quiero, <strong>querés</strong>, quiere, queremos, quieren</td></tr>
+            <tr><td>Preterite</td><td>quise, quisiste, quiso, quisimos, quisieron</td></tr>
+            <tr><td>Imperfect</td><td>quería, querías, quería, queríamos, querían</td></tr>
+            <tr><td>Conditional</td><td>querría, querrías, querría, querríamos, querrían</td></tr>
+            <tr><td>Simple Future</td><td>querré, querrás, querrá, querremos, querrán</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="category" open>
+        <summary><span class="category-title">6. HACER (to do/make)</span></summary>
+        <div class="items">
+          <table style="width:100%; border-collapse: collapse; font-size: 12px;">
+            <tr><td><strong>Form</strong></td><td><strong>Conjugation</strong></td></tr>
+            <tr><td>Infinitive</td><td>hacer</td></tr>
+            <tr><td>Gerund</td><td>haciendo</td></tr>
+            <tr><td>Participle</td><td>hecho</td></tr>
+            <tr><td>Present</td><td>hago, <strong>hacés</strong>, hace, hacemos, hacen</td></tr>
+            <tr><td>Preterite</td><td>hice, hiciste, hizo, hicimos, hicieron</td></tr>
+            <tr><td>Imperfect</td><td>hacía, hacías, hacía, hacíamos, hacían</td></tr>
+            <tr><td>Conditional</td><td>haría, harías, haría, haríamos, harían</td></tr>
+            <tr><td>Simple Future</td><td>haré, harás, hará, haremos, harán</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <!-- Notes -->
+      <details class="category">
+        <summary><span class="category-title">Notes for Elise</span></summary>
+        <div class="items">
+          <ul style="padding-left: 16px; font-size: 12px;">
+            <li>VOS form is bolded in present tense (sos, estás, tenés, vas, querés, hacés).</li>
+            <li>Gerund is used with estar: “Estoy haciendo la tarea.”</li>
+            <li>Participle is used with haber: “He hecho la tarea.”</li>
+            <li>Simple future “voy a…” is often preferred in spoken Argentine Spanish: “Mañana voy a hacer ejercicio.”</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- Survival Phrases -->
+      <details class="category" open>
+        <summary><span class="category-title">Week 1 – Survival Phrases (Present Tense, VOS)</span></summary>
+        
+        <details class="category">
+          <summary><span class="category-title">1. Greetings & Introductions</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">Hola</span> <span class="es">Hi / Hello</span></li>
+            <li class="item"><span class="en">Buen día</span> <span class="es">Good morning</span></li>
+            <li class="item"><span class="en">Buenas tardes</span> <span class="es">Good afternoon</span></li>
+            <li class="item"><span class="en">Buenas noches</span> <span class="es">Good evening / Good night</span></li>
+            <li class="item"><span class="en">¿Cómo estás?</span> <span class="es">How are you?</span></li>
+            <li class="item"><span class="en">Estoy bien, gracias</span> <span class="es">I’m fine, thanks</span></li>
+            <li class="item"><span class="en">¿Cómo te llamás?</span> <span class="es">What’s your name?</span></li>
+            <li class="item"><span class="en">Me llamo Elise</span> <span class="es">My name is Elise</span></li>
+            <li class="item"><span class="en">Mucho gusto</span> <span class="es">Nice to meet you</span></li>
+            <li class="item"><span class="en">Encantada</span> <span class="es">Pleased to meet you</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">2. Polite Expressions</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">Por favor</span> <span class="es">Please</span></li>
+            <li class="item"><span class="en">Gracias</span> <span class="es">Thank you</span></li>
+            <li class="item"><span class="en">De nada</span> <span class="es">You’re welcome</span></li>
+            <li class="item"><span class="en">Disculpá</span> <span class="es">Excuse me / Sorry</span></li>
+            <li class="item"><span class="en">Perdón</span> <span class="es">Sorry</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">3. Asking & Giving Personal Info</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">¿De dónde sos?</span> <span class="es">Where are you from?</span></li>
+            <li class="item"><span class="en">Soy de Nueva Zelanda</span> <span class="es">I’m from New Zealand</span></li>
+            <li class="item"><span class="en">¿Cuántos años tenés?</span> <span class="es">How old are you?</span></li>
+            <li class="item"><span class="en">Tengo 26 años</span> <span class="es">I’m 26 years old</span></li>
+            <li class="item"><span class="en">¿Sos casado/a?</span> <span class="es">Are you married?</span></li>
+            <li class="item"><span class="en">No, no estoy casada</span> <span class="es">No, I’m not married</span></li>
+            <li class="item"><span class="en">¿Tenés hermanos?</span> <span class="es">Do you have siblings?</span></li>
+            <li class="item"><span class="en">Sí, tengo un hermano</span> <span class="es">Yes, I have one brother</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">4. Basic Needs / Survival</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">¿Dónde está el baño?</span> <span class="es">Where is the bathroom?</span></li>
+            <li class="item"><span class="en">¿Dónde está la cocina?</span> <span class="es">Where is the kitchen?</span></li>
+            <li class="item"><span class="en">Tengo hambre</span> <span class="es">I’m hungry</span></li>
+            <li class="item"><span class="en">Tengo sed</span> <span class="es">I’m thirsty</span></li>
+            <li class="item"><span class="en">Necesito ayuda</span> <span class="es">I need help</span></li>
+            <li class="item"><span class="en">¿Me podés ayudar?</span> <span class="es">Can you help me?</span></li>
+            <li class="item"><span class="en">No entiendo</span> <span class="es">I don’t understand</span></li>
+            <li class="item"><span class="en">¿Podés repetir, por favor?</span> <span class="es">Can you repeat, please?</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">5. Numbers & Simple Questions</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">Uno, dos, tres…</span> <span class="es">One, two, three…</span></li>
+            <li class="item"><span class="en">¿Cuánto cuesta?</span> <span class="es">How much does it cost?</span></li>
+            <li class="item"><span class="en">¿A qué hora…?</span> <span class="es">At what time…?</span></li>
+            <li class="item"><span class="en">¿Dónde está…?</span> <span class="es">Where is…?</span></li>
+            <li class="item"><span class="en">¿Qué es esto?</span> <span class="es">What is this?</span></li>
+            <li class="item"><span class="en">Esto es…</span> <span class="es">This is…</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">6. Expressing Feelings / Likes</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">Estoy feliz</span> <span class="es">I’m happy</span></li>
+            <li class="item"><span class="en">Estoy cansada</span> <span class="es">I’m tired</span></li>
+            <li class="item"><span class="en">Me gusta la comida</span> <span class="es">I like the food</span></li>
+            <li class="item"><span class="en">No me gusta</span> <span class="es">I don’t like it</span></li>
+            <li class="item"><span class="en">¿Te gusta?</span> <span class="es">Do you like it?</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">Tips for Week 1</span></summary>
+          <div class="items">
+            <ul style="padding-left: 16px; font-size: 12px;">
+              <li>Focus on pronunciation & repeating phrases – say them out loud many times.</li>
+              <li>Practice VOS – even in simple sentences like “Sos muy amable” (You are very kind).</li>
+              <li>Mix phrases into mini-dialogues – example: Elise: “Hola, ¿cómo estás?” Family: “Bien, gracias. ¿Y vos?” Elise: “Estoy bien, gracias. Me llamo Elise.”</li>
+            </ul>
+          </div>
+        </details>
+
+      </details>
+
+      <!-- Vocabulary -->
+      <details class="category" open>
+        <summary><span class="category-title">Week 1 Vocabulary – Foundations (Essential Words)</span></summary>
+        
+        <details class="category">
+          <summary><span class="category-title">1. Family / People</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">la familia</span> <span class="es">family</span></li>
+            <li class="item"><span class="en">la mamá</span> <span class="es">mom</span></li>
+            <li class="item"><span class="en">el papá</span> <span class="es">dad</span></li>
+            <li class="item"><span class="en">la hermana</span> <span class="es">sister</span></li>
+            <li class="item"><span class="en">el hermano</span> <span class="es">brother</span></li>
+            <li class="item"><span class="en">la abuela</span> <span class="es">grandma</span></li>
+            <li class="item"><span class="en">el abuelo</span> <span class="es">grandpa</span></li>
+            <li class="item"><span class="en">la tía</span> <span class="es">aunt</span></li>
+            <li class="item"><span class="en">el tío</span> <span class="es">uncle</span></li>
+            <li class="item"><span class="en">la prima</span> <span class="es">cousin (female)</span></li>
+            <li class="item"><span class="en">el primo</span> <span class="es">cousin (male)</span></li>
+            <li class="item"><span class="en">el amigo</span> <span class="es">friend (male)</span></li>
+            <li class="item"><span class="en">la amiga</span> <span class="es">friend (female)</span></li>
+            <li class="item"><span class="en">la gente</span> <span class="es">people</span></li>
+            <li class="item"><span class="en">el niño</span> <span class="es">child (male)</span></li>
+            <li class="item"><span class="en">la niña</span> <span class="es">child (female)</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">2. Common Verbs (Present Tense Focus for Week 1)</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">ser</span> <span class="es">to be (permanent)</span></li>
+            <li class="item"><span class="en">estar</span> <span class="es">to be (temporary)</span></li>
+            <li class="item"><span class="en">tener</span> <span class="es">to have</span></li>
+            <li class="item"><span class="en">ir</span> <span class="es">to go</span></li>
+            <li class="item"><span class="en">hacer</span> <span class="es">to do / make</span></li>
+            <li class="item"><span class="en">querer</span> <span class="es">to want</span></li>
+            <li class="item"><span class="en">gustar</span> <span class="es">to like</span></li>
+            <li class="item"><span class="en">hablar</span> <span class="es">to talk / speak</span></li>
+            <li class="item"><span class="en">comer</span> <span class="es">to eat</span></li>
+            <li class="item"><span class="en">beber</span> <span class="es">to drink</span></li>
+            <li class="item"><span class="en">vivir</span> <span class="es">to live</span></li>
+            <li class="item"><span class="en">venir</span> <span class="es">to come</span></li>
+            <li class="item"><span class="en">llamar(se)</span> <span class="es">to call / be called</span></li>
+          </ul>
+          <p style="font-size: 11px; margin-top: 8px;">Tip: Use VOS forms for ser, estar, tener, ir, hacer, querer (sos, estás, tenés, vas, hacés, querés)</p>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">3. Numbers</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">uno</span> <span class="es">one</span></li>
+            <li class="item"><span class="en">dos</span> <span class="es">two</span></li>
+            <li class="item"><span class="en">tres</span> <span class="es">three</span></li>
+            <li class="item"><span class="en">cuatro</span> <span class="es">four</span></li>
+            <li class="item"><span class="en">cinco</span> <span class="es">five</span></li>
+            <li class="item"><span class="en">seis</span> <span class="es">six</span></li>
+            <li class="item"><span class="en">siete</span> <span class="es">seven</span></li>
+            <li class="item"><span class="en">ocho</span> <span class="es">eight</span></li>
+            <li class="item"><span class="en">nueve</span> <span class="es">nine</span></li>
+            <li class="item"><span class="en">diez</span> <span class="es">ten</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">4. Days / Time</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">lunes</span> <span class="es">Monday</span></li>
+            <li class="item"><span class="en">martes</span> <span class="es">Tuesday</span></li>
+            <li class="item"><span class="en">miércoles</span> <span class="es">Wednesday</span></li>
+            <li class="item"><span class="en">jueves</span> <span class="es">Thursday</span></li>
+            <li class="item"><span class="en">viernes</span> <span class="es">Friday</span></li>
+            <li class="item"><span class="en">sábado</span> <span class="es">Saturday</span></li>
+            <li class="item"><span class="en">domingo</span> <span class="es">Sunday</span></li>
+            <li class="item"><span class="en">hoy</span> <span class="es">today</span></li>
+            <li class="item"><span class="en">mañana</span> <span class="es">tomorrow</span></li>
+            <li class="item"><span class="en">ayer</span> <span class="es">yesterday</span></li>
+            <li class="item"><span class="en">ahora</span> <span class="es">now</span></li>
+            <li class="item"><span class="en">tarde</span> <span class="es">afternoon</span></li>
+            <li class="item"><span class="en">noche</span> <span class="es">night</span></li>
+            <li class="item"><span class="en">mañana (time)</span> <span class="es">morning</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">5. Food / Drink</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">el agua</span> <span class="es">water</span></li>
+            <li class="item"><span class="en">la leche</span> <span class="es">milk</span></li>
+            <li class="item"><span class="en">el pan</span> <span class="es">bread</span></li>
+            <li class="item"><span class="en">la fruta</span> <span class="es">fruit</span></li>
+            <li class="item"><span class="en">la manzana</span> <span class="es">apple</span></li>
+            <li class="item"><span class="en">la banana / el plátano</span> <span class="es">banana</span></li>
+            <li class="item"><span class="en">el café</span> <span class="es">coffee</span></li>
+            <li class="item"><span class="en">el té</span> <span class="es">tea</span></li>
+            <li class="item"><span class="en">el jugo / zumo</span> <span class="es">juice</span></li>
+            <li class="item"><span class="en">la comida</span> <span class="es">food</span></li>
+            <li class="item"><span class="en">la cena</span> <span class="es">dinner</span></li>
+            <li class="item"><span class="en">el desayuno</span> <span class="es">breakfast</span></li>
+            <li class="item"><span class="en">el almuerzo</span> <span class="es">lunch</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">6. Places / Directions</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">la casa</span> <span class="es">house</span></li>
+            <li class="item"><span class="en">la cocina</span> <span class="es">kitchen</span></li>
+            <li class="item"><span class="en">el baño</span> <span class="es">bathroom</span></li>
+            <li class="item"><span class="en">la escuela</span> <span class="es">school</span></li>
+            <li class="item"><span class="en">la tienda</span> <span class="es">shop / store</span></li>
+            <li class="item"><span class="en">la calle</span> <span class="es">street</span></li>
+            <li class="item"><span class="en">la plaza</span> <span class="es">square / park</span></li>
+            <li class="item"><span class="en">aquí</span> <span class="es">here</span></li>
+            <li class="item"><span class="en">allí</span> <span class="es">there</span></li>
+            <li class="item"><span class="en">cerca</span> <span class="es">near</span></li>
+            <li class="item"><span class="en">lejos</span> <span class="es">far</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">7. Basic Adjectives / Descriptions</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">bueno / buena</span> <span class="es">good</span></li>
+            <li class="item"><span class="en">malo / mala</span> <span class="es">bad</span></li>
+            <li class="item"><span class="en">grande</span> <span class="es">big</span></li>
+            <li class="item"><span class="en">pequeño / pequeña</span> <span class="es">small</span></li>
+            <li class="item"><span class="en">feliz</span> <span class="es">happy</span></li>
+            <li class="item"><span class="en">cansado / cansada</span> <span class="es">tired</span></li>
+            <li class="item"><span class="en">frío / fría</span> <span class="es">cold</span></li>
+            <li class="item"><span class="en">caliente</span> <span class="es">hot</span></li>
+            <li class="item"><span class="en">rápido / rápida</span> <span class="es">fast</span></li>
+            <li class="item"><span class="en">lento / lenta</span> <span class="es">slow</span></li>
+            <li class="item"><span class="en">fácil</span> <span class="es">easy</span></li>
+            <li class="item"><span class="en">difícil</span> <span class="es">difficult</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">8. Survival / Misc</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">sí</span> <span class="es">yes</span></li>
+            <li class="item"><span class="en">no</span> <span class="es">no</span></li>
+            <li class="item"><span class="en">por favor</span> <span class="es">please</span></li>
+            <li class="item"><span class="en">gracias</span> <span class="es">thank you</span></li>
+            <li class="item"><span class="en">de nada</span> <span class="es">you’re welcome</span></li>
+            <li class="item"><span class="en">disculpá</span> <span class="es">excuse me / sorry</span></li>
+            <li class="item"><span class="en">perdón</span> <span class="es">sorry</span></li>
+            <li class="item"><span class="en">ayuda</span> <span class="es">help</span></li>
+            <li class="item"><span class="en">¿Dónde…?</span> <span class="es">Where…?</span></li>
+            <li class="item"><span class="en">¿Cuánto…?</span> <span class="es">How much…?</span></li>
+            <li class="item"><span class="en">¿Qué…?</span> <span class="es">What…?</span></li>
+          </ul>
+        </details>
+
+      </details>
+
+    </section>
+  </main>
+
+  <script>
+    // Simple static search if needed, but for now, placeholder
+    document.getElementById('searchInput').addEventListener('input', function() {
+      // Basic filter can be added later if required
+    });
+  </script>
+</body>
+</html>

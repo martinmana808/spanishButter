@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Spanish Butter ♥</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/espanol.css">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0f1216">
+</head>
+<body>
+  <div class="desktop-blocker">
+    <p>This page is designed for mobile only. Please view on a phone or resize your window to be narrow.</p>
+  </div>
+
+  <header class="search-header">
+    <div class="search-bar">
+      <input id="searchInput" type="search" placeholder="Search English, Spanish, or Category" autocomplete="off" spellcheck="false" aria-label="Search vocabulary">
+      <button id="clearBtn" aria-label="Clear search">×</button>
+    </div>
+  </header>
+
+  <main id="content" class="content">
+    <div id="noResults" class="no-results" hidden>No matches. Try a different term.</div>
+
+    <section class="categories" id="categories">
+    <nav>
+    <a href="index.html">Words</a>
+    <a href="regular.html">Regular verbs</a>
+    <a href="week1.html">Week 1</a>
+  </nav>
+      <div class="test-section">
+        <button id="startTestBtn" class="test-btn">Take a Test (10 Questions)</button>
+      </div>
+      <details class="category" open>
+        <summary><span class="category-title">Days of the Week</span></summary>
+        <ul class="items">
+          <li class="item" data-en="Monday" data-es="Lunes" data-cat="Days of the Week"><span class="en">Monday</span>  <span class="es">Lunes</span></li>
+          <li class="item" data-en="Tuesday" data-es="Martes" data-cat="Days of the Week"><span class="en">Tuesday</span>  <span class="es">Martes</span></li>
+          <li class="item" data-en="Wednesday" data-es="Miércoles" data-cat="Days of the Week"><span class="en">Wednesday</span>  <span class="es">Miércoles</span></li>
+          <li class="item" data-en="Thursday" data-es="Jueves" data-cat="Days of the Week"><span class="en">Thursday</span>  <span class="es">Jueves</span></li>
+          <li class="item" data-en="Friday" data-es="Viernes" data-cat="Days of the Week"><span class="en">Friday</span>  <span class="es">Viernes</span></li>
+          <li class="item" data-en="Saturday" data-es="Sábado" data-cat="Days of the Week"><span class="en">Saturday</span>  <span class="es">Sábado</span></li>
+          <li class="item" data-en="Sunday" data-es="Domingo" data-cat="Days of the Week"><span class="en">Sunday</span>  <span class="es">Domingo</span></li>
+        </ul>
+      </details>
+
+      <details class="category">
+        <summary><span class="category-title">Months</span></summary>
+        <ul class="items">
+          <li class="item" data-en="January" data-es="Enero" data-cat="Months"><span class="en">January</span>  <span class="es">Enero</span></li>
+          <li class="item" data-en="February" data-es="Febrero" data-cat="Months"><span class="en">February</span>  <span class="es">Febrero</span></li>
+          <li class="item" data-en="March" data-es="Marzo" data-cat="Months"><span class="en">March</span>  <span class="es">Marzo</span></li>
+          <li class="item" data-en="April" data-es="Abril" data-cat="Months"><span class="en">April</span>  <span class="es">Abril</span></li>
+          <li class="item" data-en="May" data-es="Mayo" data-cat="Months"><span class="en">May</span>  <span class="es">Mayo</span></li>
+          <li class="item" data-en="June" data-es="Junio" data-cat="Months"><span class="en">June</span>  <span class="es">Junio</span></li>
+          <li class="item" data-en="July" data-es="Julio" data-cat="Months"><span class="en">July</span>  <span class="es">Julio</span></li>
+          <li class="item" data-en="August" data-es="Agosto" data-cat="Months"><span class="en">August</span>  <span class="es">Agosto</span></li>
+          <li class="item" data-en="September" data-es="Septiembre" data-cat="Months"><span class="en">September</span>  <span class="es">Septiembre</span></li>
+          <li class="item" data-en="October" data-es="Octubre" data-cat="Months"><span class="en">October</span>  <span class="es">Octubre</span></li>
+          <li class="item" data-en="November" data-es="Noviembre" data-cat="Months"><span class="en">November</span>  <span class="es">Noviembre</span></li>
+          <li class="item" data-en="December" data-es="Diciembre" data-cat="Months"><span class="en">December</span>  <span class="es">Diciembre</span></li>
+        </ul>
+      </details>
+
+      <details class="category">
+        <summary><span class="category-title">Numbers</span></summary>
+        <ul class="items">
+          <li class="item" data-en="1" data-es="Uno" data-cat="Numbers"><span class="en">1</span>  <span class="es">Uno</span></li>
+          <li class="item" data-en="2" data-es="Dos" data-cat="Numbers"><span class="en">2</span>  <span class="es">Dos</span></li>
+          <li class="item" data-en="3" data-es="Tres" data-cat="Numbers"><span class="en">3</span>  <span class="es">Tres</span></li>
+          <li class="item" data-en="4" data-es="Cuatro" data-cat="Numbers"><span class="en">4</span>  <span class="es">Cuatro</span></li>
+          <li class="item" data-en="5" data-es="Cinco" data-cat="Numbers"><span class="en">5</span>  <span class="es">Cinco</span></li>
+          <li class="item" data-en="6" data-es="Seis" data-cat="Numbers"><span class="en">6</span>  <span class="es">Seis</span></li>
+          <li class="item" data-en="7" data-es="Siete" data-cat="Numbers"><span class="en">7</span>  <span class="es">Siete</span></li>
+          <li class="item" data-en="8" data-es="Ocho" data-cat="Numbers"><span class="en">8</span>  <span class="es">Ocho</span></li>
+          <li class="item" data-en="9" data-es="Nueve" data-cat="Numbers"><span class="en">9</span>  <span class="es">Nueve</span></li>
+          <li class="item" data-en="10" data-es="Diez" data-cat="Numbers"><span class="en">10</span>  <span class="es">Diez</span></li>
+          <li class="item" data-en="20" data-es="Veinte" data-cat="Numbers"><span class="en">20</span>  <span class="es">Veinte</span></li>
+          <li class="item" data-en="30" data-es="Treinta" data-cat="Numbers"><span class="en">30</span>  <span class="es">Treinta</span></li>
+          <li class="item" data-en="40" data-es="Cuarenta" data-cat="Numbers"><span class="en">40</span>  <span class="es">Cuarenta</span></li>
+          <li class="item" data-en="50" data-es="Cincuenta" data-cat="Numbers"><span class="en">50</span>  <span class="es">Cincuenta</span></li>
+          <li class="item" data-en="60" data-es="Sesenta" data-cat="Numbers"><span class="en">60</span>  <span class="es">Sesenta</span></li>
+          <li class="item" data-en="70" data-es="Setenta" data-cat="Numbers"><span class="en">70</span>  <span class="es">Setenta</span></li>
+          <li class="item" data-en="80" data-es="Ochenta" data-cat="Numbers"><span class="en">80</span>  <span class="es">Ochenta</span></li>
+          <li class="item" data-en="90" data-es="Noventa" data-cat="Numbers"><span class="en">90</span>  <span class="es">Noventa</span></li>
+          <li class="item" data-en="100" data-es="Cien" data-cat="Numbers"><span class="en">100</span>  <span class="es">Cien</span></li>
+          <li class="item" data-en="1000" data-es="Mil" data-cat="Numbers"><span class="en">1000</span>  <span class="es">Mil</span></li>
+        </ul>
+      </details>
+
+      <details class="category">
+        <summary><span class="category-title">Colors</span></summary>
+        <ul class="items">
+          <li class="item" data-en="Red" data-es="Rojo" data-cat="Colors"><span class="en">Red</span>  <span class="es">Rojo</span></li>
+          <li class="item" data-en="Blue" data-es="Azul" data-cat="Colors"><span class="en">Blue</span>  <span class="es">Azul</span></li>
+          <li class="item" data-en="Green" data-es="Verde" data-cat="Colors"><span class="en">Green</span>  <span class="es">Verde</span></li>
+          <li class="item" data-en="Yellow" data-es="Amarillo" data-cat="Colors"><span class="en">Yellow</span>  <span class="es">Amarillo</span></li>
+          <li class="item" data-en="Orange" data-es="Naranja" data-cat="Colors"><span class="en">Orange</span>  <span class="es">Naranja</span></li>
+          <li class="item" data-en="Purple" data-es="Violeta" data-cat="Colors"><span class="en">Purple</span>  <span class="es">Violeta</span></li>
+          <li class="item" data-en="Pink" data-es="Rosa" data-cat="Colors"><span class="en">Pink</span>  <span class="es">Rosa</span></li>
+          <li class="item" data-en="Brown" data-es="Marrón" data-cat="Colors"><span class="en">Brown</span>  <span class="es">Marrón</span></li>
+          <li class="item" data-en="Black" data-es="Negro" data-cat="Colors"><span class="en">Black</span>  <span class="es">Negro</span></li>
+          <li class="item" data-en="White" data-es="Blanco" data-cat="Colors"><span class="en">White</span>  <span class="es">Blanco</span></li>
+        </ul>
+      </details>
+
+      <details class="category">
+        <summary><span class="category-title">Pronouns</span></summary>
+        <ul class="items">
+          <li class="item" data-en="I" data-es="Yo" data-cat="Pronouns"><span class="en">I</span>  <span class="es">Yo</span></li>
+          <li class="item" data-en="You" data-es="Vos" data-cat="Pronouns"><span class="en">You</span>  <span class="es">Vos</span></li>
+          <li class="item" data-en="He, She" data-es="Él, Ella" data-cat="Pronouns"><span class="en">He, She</span>  <span class="es">Él, Ella</span></li>
+          <li class="item" data-en="We" data-es="Nosotros" data-cat="Pronouns"><span class="en">We</span>  <span class="es">Nosotros</span></li>
+          <li class="item" data-en="Yourselves" data-es="Ustedes" data-cat="Pronouns"><span class="en">Yourselves</span>  <span class="es">Ustedes</span></li>
+          <li class="item" data-en="They" data-es="Ellos, Ellas" data-cat="Pronouns"><span class="en">They</span>  <span class="es">Ellos, Ellas</span></li>
+        </ul>
+      </details>
+
+      <details class="category">
+        <summary><span class="category-title">Verbs</span></summary>
+        <ul class="items">
+          <li class="item" data-en="To be" data-es="Ser" data-cat="Verbs"><span class="en">To be</span> <span class="hint">(forever)</span>  <span class="es">Ser</span></li>
+          <li class="item" data-en="To be" data-es="Estar" data-cat="Verbs"><span class="en">To be</span> <span class="hint">(temporary)</span>  <span class="es">Estar</span></li>
+          <li class="item" data-en="To have" data-es="Tener" data-cat="Verbs"><span class="en">To have</span>  <span class="es">Tener</span></li>
+          <li class="item" data-en="To do" data-es="Hacer" data-cat="Verbs"><span class="en">To do</span>  <span class="es">Hacer</span></li>
+          <li class="item" data-en="To go" data-es="Ir" data-cat="Verbs"><span class="en">To go</span>  <span class="es">Ir</span></li>
+          <li class="item" data-en="To come" data-es="Venir" data-cat="Verbs"><span class="en">To come</span>  <span class="es">Venir</span></li>
+          <li class="item" data-en="To see" data-es="Ver" data-cat="Verbs"><span class="en">To see</span>  <span class="es">Ver</span></li>
+          <li class="item" data-en="To look" data-es="Mirar" data-cat="Verbs"><span class="en">To look</span>  <span class="es">Mirar</span></li>
+          <li class="item" data-en="To hear" data-es="Escuchar" data-cat="Verbs"><span class="en">To hear</span>  <span class="es">Escuchar</span></li>
+          <li class="item" data-en="To listen to" data-es="Escuchar" data-cat="Verbs"><span class="en">To listen to</span>  <span class="es">Escuchar</span></li>
+          <li class="item" data-en="To speak" data-es="Hablar" data-cat="Verbs"><span class="en">To speak</span>  <span class="es">Hablar</span></li>
+          <li class="item" data-en="To read" data-es="Leer" data-cat="Verbs"><span class="en">To read</span>  <span class="es">Leer</span></li>
+          <li class="item" data-en="To drink" data-es="Tomar" data-cat="Verbs"><span class="en">To drink</span>  <span class="es">Tomar</span></li>
+          <li class="item" data-en="To eat" data-es="Comer" data-cat="Verbs"><span class="en">To eat</span>  <span class="es">Comer</span></li>
+          <li class="item" data-en="To write" data-es="Escribir" data-cat="Verbs"><span class="en">To write</span>  <span class="es">Escribir</span></li>
+          <li class="item" data-en="To think" data-es="Pensar" data-cat="Verbs"><span class="en">To think</span>  <span class="es">Pensar</span></li>
+          <li class="item" data-en="To feel" data-es="Sentir" data-cat="Verbs"><span class="en">To feel</span>  <span class="es">Sentir</span></li>
+          <li class="item" data-en="To want" data-es="Querer" data-cat="Verbs"><span class="en">To want</span>  <span class="es">Querer</span></li>
+          <li class="item" data-en="To need" data-es="Necesitar" data-cat="Verbs"><span class="en">To need</span>  <span class="es">Necesitar</span></li>
+          <li class="item" data-en="To like" data-es="Gustar" data-cat="Verbs"><span class="en">To like</span>  <span class="es">Gustar</span></li>
+          <li class="item" data-en="To love" data-es="Amar" data-cat="Verbs"><span class="en">To love</span>  <span class="es">Amar</span></li>
+          <li class="item" data-en="To hate" data-es="Odiar" data-cat="Verbs"><span class="en">To hate</span>  <span class="es">Odiar</span></li>
+          <li class="item" data-en="To want" data-es="Querer" data-cat="Verbs"><span class="en">To want</span>  <span class="es">Querer</span></li>
+          <li class="item" data-en="To kiss" data-es="Besar" data-cat="Verbs"><span class="en">To kiss</span>  <span class="es">Besar</span></li>
+          <li class="item" data-en="To sleep" data-es="Dormir" data-cat="Verbs"><span class="en">To sleep</span>  <span class="es">Dormir</span></li>
+          <li class="item" data-en="To wake up" data-es="Despertar" data-cat="Verbs"><span class="en">To wake up</span>  <span class="es">Despertar</span></li>
+          <li class="item" data-en="To die" data-es="Morir" data-cat="Verbs"><span class="en">To die</span>  <span class="es">Morir</span></li>
+          <li class="item" data-en="To live" data-es="Vivir" data-cat="Verbs"><span class="en">To live</span>  <span class="es">Vivir</span></li>
+          <li class="item" data-en="To work" data-es="Trabajar" data-cat="Verbs"><span class="en">To work</span>  <span class="es">Trabajar</span></li>
+          <li class="item" data-en="To study" data-es="Estudiar" data-cat="Verbs"><span class="en">To study</span>  <span class="es">Estudiar</span></li>
+          <li class="item" data-en="To travel" data-es="Viajar" data-cat="Verbs"><span class="en">To travel</span>  <span class="es">Viajar</span></li>
+          <li class="item" data-en="To drive" data-es="Conducir" data-cat="Verbs"><span class="en">To drive</span>  <span class="es">Conducir</span></li>
+          <li class="item" data-en="To walk" data-es="Caminar" data-cat="Verbs"><span class="en">To walk</span>  <span class="es">Caminar</span></li>
+          <li class="item" data-en="To run" data-es="Correr" data-cat="Verbs"><span class="en">To run</span>  <span class="es">Correr</span></li>
+          <li class="item" data-en="To jump" data-es="Saltar" data-cat="Verbs"><span class="en">To jump</span>  <span class="es">Saltar</span></li>
+          <li class="item" data-en="To swim" data-es="Nadar" data-cat="Verbs"><span class="en">To swim</span>  <span class="es">Nadar</span></li>
+          <li class="item" data-en="To fly" data-es="Volar" data-cat="Verbs"><span class="en">To fly</span>  <span class="es">Volar</span></li>
+          <li class="item" data-en="To dance" data-es="Bailar" data-cat="Verbs"><span class="en">To dance</span>  <span class="es">Bailar</span></li>
+          <li class="item" data-en="To sing" data-es="Cantar" data-cat="Verbs"><span class="en">To sing</span>  <span class="es">Cantar</span></li>
+          <li class="item" data-en="To play" data-es="Jugar" data-cat="Verbs"><span class="en">To play</span>  <span class="es">Jugar</span></li>
+          <li class="item" data-en="To watch" data-es="Ver" data-cat="Verbs"><span class="en">To watch</span>  <span class="es">Ver</span></li>
+          <li class="item" data-en="To send, To order" data-es="Mandar" data-cat="Verbs"><span class="en">To send, To order</span>  <span class="es">Mandar</span></li>
+          <li class="item" data-en="To receive" data-es="Recibir" data-cat="Verbs"><span class="en">To receive</span>  <span class="es">Recibir</span></li>
+        </ul>
+      </details>
+
+      <details class="category">
+        <summary><span class="category-title">Adjectives</span></summary>
+        <ul class="items">
+          <li class="item" data-en="Big" data-es="Grande" data-cat="Adjectives"><span class="en">Big</span>  <span class="es">Grande</span></li>
+          <li class="item" data-en="Small" data-es="Pequeño" data-cat="Adjectives"><span class="en">Small</span>  <span class="es">Pequeño</span></li>
+          <li class="item" data-en="Tall" data-es="Alto" data-cat="Adjectives"><span class="en">Tall</span>  <span class="es">Alto</span></li>
+          <li class="item" data-en="Short" data-es="Corto" data-cat="Adjectives"><span class="en">Short</span>  <span class="es">Corto</span></li>
+          <li class="item" data-en="Long" data-es="Largo" data-cat="Adjectives"><span class="en">Long</span>  <span class="es">Largo</span></li>
+          <li class="item" data-en="Wide" data-es="Ancho" data-cat="Adjectives"><span class="en">Wide</span>  <span class="es">Ancho</span></li>
+          <li class="item" data-en="Narrow" data-es="Angosto" data-cat="Adjectives"><span class="en">Narrow</span>  <span class="es">Angosto</span></li>
+          <li class="item" data-en="High" data-es="Alto" data-cat="Adjectives"><span class="en">High</span>  <span class="es">Alto</span></li>
+          <li class="item" data-en="Low" data-es="Bajo" data-cat="Adjectives"><span class="en">Low</span>  <span class="es">Bajo</span></li>
+          <li class="item" data-en="Near" data-es="Cercano, Cerca" data-cat="Adjectives"><span class="en">Near</span>  <span class="es">Cercano, Cerca</span></li>
+          <li class="item" data-en="Far" data-es="Lejano, Lejos" data-cat="Adjectives"><span class="en">Far</span>  <span class="es">Lejano, Lejos</span></li>
+          <li class="item" data-en="Old" data-es="Viejo" data-cat="Adjectives"><span class="en">Old</span>  <span class="es">Viejo</span></li>
+          <li class="item" data-en="Young" data-es="Joven" data-cat="Adjectives"><span class="en">Young</span>  <span class="es">Joven</span></li>
+          <li class="item" data-en="Happy" data-es="Feliz" data-cat="Adjectives"><span class="en">Happy</span>  <span class="es">Feliz</span></li>
+          <li class="item" data-en="Sad" data-es="Triste" data-cat="Adjectives"><span class="en">Sad</span>  <span class="es">Triste</span></li>
+          <li class="item" data-en="Angry" data-es="Enojado" data-cat="Adjectives"><span class="en">Angry</span>  <span class="es">Enojado</span></li>
+          <li class="item" data-en="Excited" data-es="Emocionado" data-cat="Adjectives"><span class="en">Excited</span>  <span class="es">Emocionado</span></li>
+          <li class="item" data-en="Bored" data-es="Aburrido" data-cat="Adjectives"><span class="en">Bored</span>  <span class="es">Aburrido</span></li>
+          <li class="item" data-en="Busy" data-es="Ocupado" data-cat="Adjectives"><span class="en">Busy</span>  <span class="es">Ocupado</span></li>
+          <li class="item" data-en="Free" data-es="Libre" data-cat="Adjectives"><span class="en">Free</span>  <span class="es">Libre</span></li>
+          <li class="item" data-en="Rich" data-es="Rico" data-cat="Adjectives"><span class="en">Rich</span>  <span class="es">Rico</span></li>
+          <li class="item" data-en="Poor" data-es="Pobre" data-cat="Adjectives"><span class="en">Poor</span>  <span class="es">Pobre</span></li>
+          <li class="item" data-en="Smart" data-es="Inteligente" data-cat="Adjectives"><span class="en">Smart</span>  <span class="es">Inteligente</span></li>
+          <li class="item" data-en="Dumb" data-es="Tonto" data-cat="Adjectives"><span class="en">Dumb</span>  <span class="es">Tonto</span></li>
+          <li class="item" data-en="Funny" data-es="Divertido" data-cat="Adjectives"><span class="en">Funny</span>  <span class="es">Divertido</span></li>
+        </ul>
+      </details>
+
+      <details class="category">
+        <summary><span class="category-title">Nature</span></summary>
+        <ul class="items">
+          <li class="item" data-en="Flower" data-es="Flor" data-cat="Nature"><span class="en">Flower</span>  <span class="es">Flor</span></li>
+<li class="item" data-en="Tree" data-es="Árbol" data-cat="Nature"><span class="en">Tree</span>  <span class="es">Árbol</span></li>
+<li class="item" data-en="Forest" data-es="Bosque" data-cat="Nature"><span class="en">Forest</span>  <span class="es">Bosque</span></li>
+<li class="item" data-en="Beach" data-es="Playa" data-cat="Nature"><span class="en">Beach</span>  <span class="es">Playa</span></li>
+<li class="item" data-en="Sky" data-es="Cielo" data-cat="Nature"><span class="en">Sky</span>  <span class="es">Cielo</span></li>
+<li class="item" data-en="Water" data-es="Agua" data-cat="Nature"><span class="en">Water</span>  <span class="es">Agua</span></li>
+<li class="item" data-en="Cloud" data-es="Nube" data-cat="Nature"><span class="en">Cloud</span>  <span class="es">Nube</span></li>
+<li class="item" data-en="Rain" data-es="Lluvia" data-cat="Nature"><span class="en">Rain</span>  <span class="es">Lluvia</span></li>
+<li class="item" data-en="Storm" data-es="Tormenta" data-cat="Nature"><span class="en">Storm</span>  <span class="es">Tormenta</span></li>
+<li class="item" data-en="Wind" data-es="Viento" data-cat="Nature"><span class="en">Wind</span>  <span class="es">Viento</span></li>
+<li class="item" data-en="Sun" data-es="Sol" data-cat="Nature"><span class="en">Sun</span>  <span class="es">Sol</span></li>
+<li class="item" data-en="Moon" data-es="Luna" data-cat="Nature"><span class="en">Moon</span>  <span class="es">Luna</span></li>
+<li class="item" data-en="Star" data-es="Estrella" data-cat="Nature"><span class="en">Star</span>  <span class="es">Estrella</span></li>
+<li class="item" data-en="Mountain" data-es="Montaña" data-cat="Nature"><span class="en">Mountain</span>  <span class="es">Montaña</span></li>
+<li class="item" data-en="River" data-es="Río" data-cat="Nature"><span class="en">River</span>  <span class="es">Río</span></li>
+<li class="item" data-en="Lake" data-es="Lago" data-cat="Nature"><span class="en">Lake</span>  <span class="es">Lago</span></li>
+<li class="item" data-en="Sea" data-es="Mar" data-cat="Nature"><span class="en">Sea</span>  <span class="es">Mar</span></li>
+<li class="item" data-en="Desert" data-es="Desierto" data-cat="Nature"><span class="en">Desert</span>  <span class="es">Desierto</span></li>
+<li class="item" data-en="Island" data-es="Isla" data-cat="Nature"><span class="en">Island</span>  <span class="es">Isla</span></li>
+<li class="item" data-en="Animal" data-es="Animal" data-cat="Nature"><span class="en">Animal</span>  <span class="es">Animal</span></li>
+        </ul>
+      </details>
+      <details class="category">
+        <summary><span class="category-title">Clothes</span></summary>
+        <ul class="items">
+          <li class="item" data-en="Clothes" data-es="Ropa" data-cat="Clothes"><span class="en">Clothes</span>  <span class="es">Ropa</span></li>
+          <li class="item" data-en="Pants" data-es="Pantalones" data-cat="Pants"><span class="en">Clothes</span>  <span class="es">Pantalones</span></li>
+          <li class="item" data-en="T-shirt" data-es="Remera" data-cat="Clothes"><span class="en">T-shirt</span>  <span class="es">Remera</span></li>
+          <li class="item" data-en="Shirt" data-es="Camisa" data-cat="Clothes"><span class="en">Shirt</span>  <span class="es">Camisa</span></li>
+          <li class="item" data-en="Socks" data-es="Medias" data-cat="Clothes"><span class="en">Socks</span>  <span class="es">Medias</span></li>
+          <li class="item" data-en="Dress" data-es="Vestido" data-cat="Clothes"><span class="en">Dress</span>  <span class="es">Vestido</span></li>
+          <li class="item" data-en="Shoes" data-es="Zapatos" data-cat="Clothes"><span class="en">Shoes</span>  <span class="es">Zapatos</span></li>
+          <li class="item" data-en="Sneakers" data-es="Zapatillas" data-cat="Clothes"><span class="en">Sneakers</span>  <span class="es">Zapatillas</span></li>
+          <li class="item" data-en="Slippers" data-es="Pantuflas" data-cat="Clothes"><span class="en">Slippers</span>  <span class="es">Pantuflas</span></li>
+          <li class="item" data-en="Hoodie" data-es="Buzo con capucha" data-cat="Clothes"><span class="en">Hoodie</span>  <span class="es">Buzo con capucha</span></li>
+          <li class="item" data-en="Sweater" data-es="Suéter" data-cat="Clothes"><span class="en">Sweater</span>  <span class="es">Suéter</span></li>
+          <li class="item" data-en="Scarf" data-es="Bufanda" data-cat="Clothes"><span class="en">Scarf</span>  <span class="es">Bufanda</span></li>
+          <li class="item" data-en="Hat" data-es="Sombrero" data-cat="Clothes"><span class="en">Hat</span>  <span class="es">Sombrero</span></li>
+          <li class="item" data-en="Cap" data-es="Gorra" data-cat="Clothes"><span class="en">Cap</span>  <span class="es">Gorra</span></li>
+          <li class="item" data-en="Glasses" data-es="Anteojos" data-cat="Clothes"><span class="en">Glasses</span>  <span class="es">Anteojos</span></li>
+          <li class="item" data-en="Sunglasses" data-es="Anteojos de sol" data-cat="Clothes"><span class="en">Sunglasses</span>  <span class="es">Anteojos de sol</span></li>
+          <li class="item" data-en="Earring" data-es="Aro" data-cat="Clothes"><span class="en">Earring</span>  <span class="es">Aro</span></li>
+          <li class="item" data-en="Ring" data-es="Anillo" data-cat="Clothes"><span class="en">Ring</span>  <span class="es">Anillo</span></li>
+          <li class="item" data-en="Necklace" data-es="Collar" data-cat="Clothes"><span class="en">Necklace</span>  <span class="es">Collar</span></li>
+          <li class="item" data-en="Gloves" data-es="Guantes" data-cat="Clothes"><span class="en">Gloves</span>  <span class="es">Guantes</span></li>
+          <li class="item" data-en="Undies" data-es="Calzones" data-cat="Clothes"><span class="en">Undies</span>  <span class="es">Calzones</span></li>
+          <li class="item" data-en="Male undies" data-es="Calzoncillos" data-cat="Clothes"><span class="en">Male undies</span>  <span class="es">Calzoncillos</span></li>
+          <li class="item" data-en="Female undies" data-es="Bombacha" data-cat="Clothes"><span class="en">Female undies</span>  <span class="es">Bombacha</span></li>
+          <li class="item" data-en="Bra" data-es="Corpiño" data-cat="Clothes"><span class="en">Bra</span>  <span class="es">Corpiño</span></li>
+        </ul>
+      </details>
+      <details class="category">
+        <summary><span class="category-title">Things</span></summary>
+        <ul class="items">
+          <li class="item" data-en="Man" data-es="Hombre" data-cat="Things"><span class="en">Man</span>  <span class="es">Hombre</span></li>
+          <li class="item" data-en="Woman" data-es="Mujer" data-cat="Things"><span class="en">Woman</span>  <span class="es">Mujer</span></li>
+          <li class="item" data-en="Child" data-es="Niño, Niña" data-cat="Things"><span class="en">Child</span>  <span class="es">Nene, Nena</span></li>
+          <li class="item" data-en="House" data-es="Casa" data-cat="Things"><span class="en">House</span>  <span class="es">Casa</span></li>
+          <li class="item" data-en="Key" data-es="Llave" data-cat="Things"><span class="en">Key</span>  <span class="es">Llave</span></li>
+<li class="item" data-en="Door" data-es="Puerta" data-cat="Things"><span class="en">Door</span>  <span class="es">Puerta</span></li>
+    <li class="item" data-en="Window" data-es="Ventana" data-cat="Things"><span class="en">Window</span>  <span class="es">Ventana</span></li>
+    <li class="item" data-en="Kitchen" data-es="Cocina" data-cat="Things"><span class="en">Kitchen</span>  <span class="es">Cocina</span></li>
+    <li class="item" data-en="Stove" data-es="Hornalla" data-cat="Things"><span class="en">Stove</span>  <span class="es">Hornalla</span></li>
+    <li class="item" data-en="Oven" data-es="Horno" data-cat="Things"><span class="en">Oven</span>  <span class="es">Horno</span></li>
+    <li class="item" data-en="Fridge" data-es="Heladera" data-cat="Things"><span class="en">Fridge</span>  <span class="es">Heladera</span></li>
+    <li class="item" data-en="Freezer" data-es="Congelador" data-cat="Things"><span class="en">Freezer</span>  <span class="es">Congelador</span></li>
+    <li class="item" data-en="Cooking pot" data-es="Cacerola" data-cat="Things"><span class="en">Cooking pot</span>  <span class="es">Cacerola</span></li>
+    <li class="item" data-en="Frying pan" data-es="Sartén" data-cat="Things"><span class="en">Frying pan</span>  <span class="es">Sartén</span></li>
+    <li class="item" data-en="Microwave" data-es="Microondas" data-cat="Things"><span class="en">Microwave</span>  <span class="es">Microondas</span></li>
+    <li class="item" data-en="Jug" data-es="Pava" data-cat="Things"><span class="en">Jug</span>  <span class="es">Pava</span></li>
+    <li class="item" data-en="Pantry" data-es="Alacena" data-cat="Things"><span class="en">Pantry</span>  <span class="es">Alacena</span></li>
+
+          
+          <li class="item" data-en="School" data-es="Escuela" data-cat="Things"><span class="en">School</span>  <span class="es">Escuela</span></li>
+          <li class="item" data-en="Work" data-es="Trabajo" data-cat="Things"><span class="en">Work</span>  <span class="es">Trabajo</span></li>
+          <li class="item" data-en="Trash/Rubish" data-es="Basura" data-cat="Things"><span class="en">Trash/Rubish</span>  <span class="es">Basura</span></li>
+          
+          <li class="item" data-en="Paper" data-es="Papel" data-cat="Things"><span class="en">Paper</span>  <span class="es">Papel</span></li>
+<li class="item" data-en="Notebook" data-es="Cuaderno" data-cat="Things"><span class="en">Notebook</span>  <span class="es">Cuaderno</span></li>
+<li class="item" data-en="Pen" data-es="Birome / Lapicera" data-cat="Things"><span class="en">Pen</span>  <span class="es">Birome / Lapicera</span></li>
+<li class="item" data-en="Wound" data-es="Herida" data-cat="Things"><span class="en">Wound</span>  <span class="es">Herida</span></li>
+<li class="item" data-en="Soap" data-es="Jabón" data-cat="Things"><span class="en">Soap</span>  <span class="es">Jabón</span></li>
+<li class="item" data-en="Detergent" data-es="Detergente" data-cat="Things"><span class="en">Detergent</span>  <span class="es">Detergente</span></li>
+<li class="item" data-en="Headphones" data-es="Auriculares" data-cat="Things"><span class="en">Headphones</span>  <span class="es">Auriculares</span></li>
+<li class="item" data-en="Speakers" data-es="Parlantes" data-cat="Things"><span class="en">Speakers</span>  <span class="es">Parlantes</span></li>
+<li class="item" data-en="Phone" data-es="Teléfono" data-cat="Things"><span class="en">Phone</span>  <span class="es">Teléfono</span></li>
+<li class="item" data-en="Computer" data-es="Computadora" data-cat="Things"><span class="en">Computer</span>  <span class="es">Computadora</span></li>
+<li class="item" data-en="Bag" data-es="Bolso" data-cat="Things"><span class="en">Bag</span>  <span class="es">Bolso</span></li>
+<li class="item" data-en="Wallet" data-es="Billetera" data-cat="Things"><span class="en">Wallet</span>  <span class="es">Billetera</span></li>
+<li class="item" data-en="Car" data-es="Auto" data-cat="Things"><span class="en">Car</span>  <span class="es">Auto</span></li>
+<li class="item" data-en="Bicycle" data-es="Bicicleta" data-cat="Things"><span class="en">Bicycle</span>  <span class="es">Bicicleta</span></li>
+<li class="item" data-en="Bus" data-es="Colectivo" data-cat="Things"><span class="en">Bus</span>  <span class="es">Colectivo</span></li>
+<li class="item" data-en="Train" data-es="Tren" data-cat="Things"><span class="en">Train</span>  <span class="es">Tren</span></li>
+<li class="item" data-en="Plane" data-es="Avión" data-cat="Things"><span class="en">Plane</span>  <span class="es">Avión</span></li>
+          
+        </ul>
+      </details>
+
+      <details class="category">
+        <summary><span class="category-title">Music</span></summary>
+        <ul class="items">
+          <li class="item" data-en="Music" data-es="Música" data-cat="Music"><span class="en">Music</span>  <span class="es">Música</span></li>
+<li class="item" data-en="Song" data-es="Canción" data-cat="Music"><span class="en">Song</span>  <span class="es">Canción</span></li>
+<li class="item" data-en="Album" data-es="Álbum" data-cat="Music"><span class="en">Album</span>  <span class="es">Álbum</span></li>
+<li class="item" data-en="Band" data-es="Banda" data-cat="Music"><span class="en">Band</span>  <span class="es">Banda</span></li>
+<li class="item" data-en="Guitar" data-es="Guitarra" data-cat="Music"><span class="en">Guitar</span>  <span class="es">Guitarra</span></li>
+<li class="item" data-en="Drums" data-es="Batería" data-cat="Music"><span class="en">Drums</span>  <span class="es">Batería</span></li>
+<li class="item" data-en="Bass" data-es="Bajo" data-cat="Music"><span class="en">Bass</span>  <span class="es">Bajo</span></li>
+<li class="item" data-en="Voice" data-es="Voz" data-cat="Music"><span class="en">Voice</span>  <span class="es">Voz</span></li>
+<li class="item" data-en="Concert" data-es="Concierto" data-cat="Music"><span class="en">Concert</span>  <span class="es">Concierto</span></li>
+<li class="item" data-en="Stage" data-es="Escenario" data-cat="Music"><span class="en">Stage</span>  <span class="es">Escenario</span></li>
+        </ul>
+      </details>
+      <details class="category">
+        <summary><span class="category-title">Prepositions</span></summary>
+        <ul class="items">
+          <li class="item" data-en="In, On, At" data-es="En" data-cat="Prepositions"><span class="en">In, On, At</span>  <span class="es">En</span></li>
+          <li class="item" data-en="Under" data-es="Debajo" data-cat="Prepositions"><span class="en">Under</span>  <span class="es">Debajo</span></li>
+          <li class="item" data-en="Above" data-es="Encima" data-cat="Prepositions"><span class="en">Above</span>  <span class="es">Encima</span></li>
+          <li class="item" data-en="Below" data-es="Debajo" data-cat="Prepositions"><span class="en">Below</span>  <span class="es">Debajo</span></li>
+          <li class="item" data-en="Between" data-es="Entre" data-cat="Prepositions"><span class="en">Between</span>  <span class="es">Entre</span></li>
+          <li class="item" data-en="Behind" data-es="Detrás" data-cat="Prepositions"><span class="en">Behind</span>  <span class="es">Detrás</span></li>
+          <li class="item" data-en="In the front of" data-es="Delante de" data-cat="Prepositions"><span class="en">In the front of</span>  <span class="es">Delante de</span></li>
+          <li class="item" data-en="In the back of" data-es="Detrás de" data-cat="Prepositions"><span class="en">In the back of</span>  <span class="es">Detrás de</span></li>
+          <li class="item" data-en="In the middle" data-es="En el medio" data-cat="Prepositions"><span class="en">In the middle</span>  <span class="es">En el medio</span></li>
+        </ul>
+      </details>
+
+      <details class="category">
+        <summary><span class="category-title">Directions</span></summary>
+        <ul class="items">
+          <li class="item" data-en="North" data-es="Norte" data-cat="Directions"><span class="en">North</span>  <span class="es">Norte</span></li>
+          <li class="item" data-en="South" data-es="Sur" data-cat="Directions"><span class="en">South</span>  <span class="es">Sur</span></li>
+          <li class="item" data-en="East" data-es="Este" data-cat="Directions"><span class="en">East</span>  <span class="es">Este</span></li>
+          <li class="item" data-en="West" data-es="Oeste" data-cat="Directions"><span class="en">West</span>  <span class="es">Oeste</span></li>
+          <li class="item" data-en="Up" data-es="Arriba" data-cat="Directions"><span class="en">Up</span>  <span class="es">Arriba</span></li>
+          <li class="item" data-en="Down" data-es="Abajo" data-cat="Directions"><span class="en">Down</span>  <span class="es">Abajo</span></li>
+          <li class="item" data-en="Left" data-es="Izquierda" data-cat="Directions"><span class="en">Left</span>  <span class="es">Izquierda</span></li>
+          <li class="item" data-en="Right" data-es="Derecha" data-cat="Directions"><span class="en">Right</span>  <span class="es">Derecha</span></li>
+          <li class="item" data-en="Forward" data-es="Adelante" data-cat="Directions"><span class="en">Forward</span>  <span class="es">Adelante</span></li>
+          <li class="item" data-en="Backward" data-es="Atrás" data-cat="Directions"><span class="en">Backward</span>  <span class="es">Atrás</span></li>
+        </ul>
+      </details>
+
+      <details class="category">
+        <summary><span class="category-title">Greetings</span></summary>
+        <ul class="items">
+          <li class="item" data-en="Hello" data-es="Hola" data-cat="Greetings"><span class="en">Hello</span>  <span class="es">Hola</span></li>
+          <li class="item" data-en="Hi" data-es="Hola" data-cat="Greetings"><span class="en">Hi</span>  <span class="es">Hola</span></li>
+          <li class="item" data-en="Goodbye" data-es="Adiós" data-cat="Greetings"><span class="en">Goodbye</span>  <span class="es">Adiós</span></li>
+          <li class="item" data-en="Bye" data-es="Adiós" data-cat="Greetings"><span class="en">Bye</span>  <span class="es">Adiós</span></li>
+          <li class="item" data-en="See you" data-es="Nos vemos" data-cat="Greetings"><span class="en">See you</span>  <span class="es">Nos vemos</span></li>
+          <li class="item" data-en="See you later" data-es="Nos vemos luego" data-cat="Greetings"><span class="en">See you later</span>  <span class="es">Nos vemos luego</span></li>
+          <li class="item" data-en="See you soon" data-es="Nos vemos pronto" data-cat="Greetings"><span class="en">See you soon</span>  <span class="es">Nos vemos pronto</span></li>
+        </ul>
+      </details>
+
+      <details class="category">
+        <summary><span class="category-title">Questions</span></summary>
+        <ul class="items">
+          <li class="item" data-en="What" data-es="Qué" data-cat="Questions"><span class="en">What</span>  <span class="es">Qué</span></li>
+          <li class="item" data-en="Who" data-es="Quién" data-cat="Questions"><span class="en">Who</span>  <span class="es">Quién</span></li>
+          <li class="item" data-en="Where" data-es="Dónde" data-cat="Questions"><span class="en">Where</span>  <span class="es">Dónde</span></li>
+          <li class="item" data-en="When" data-es="Cuándo" data-cat="Questions"><span class="en">When</span>  <span class="es">Cuándo</span></li>
+          <li class="item" data-en="Why" data-es="Por qué" data-cat="Questions"><span class="en">Why</span>  <span class="es">Por qué</span></li>
+          <li class="item" data-en="How" data-es="Cómo" data-cat="Questions"><span class="en">How</span>  <span class="es">Cómo</span></li>
+          <li class="item" data-en="How much" data-es="Cuánto" data-cat="Questions"><span class="en">How much</span>  <span class="es">Cuánto</span></li>
+          <li class="item" data-en="How many" data-es="Cuántos" data-cat="Questions"><span class="en">How many</span>  <span class="es">Cuántos</span></li>
+        </ul>
+      </details>
+
+      <details class="category">
+  <summary><span class="category-title">Adverbs</span></summary>
+  <ul class="items">
+    <li class="item" data-en="Very" data-es="Muy" data-cat="Adverbs"><span class="en">Very</span>  <span class="es">Muy</span></li>
+    <li class="item" data-en="Very much" data-es="Mucho" data-cat="Adverbs"><span class="en">Very much</span>  <span class="es">Mucho</span></li>
+
+    <!-- Time -->
+    <li class="item" data-en="Now" data-es="Ahora" data-cat="Adverbs"><span class="en">Now</span>  <span class="es">Ahora</span></li>
+    <li class="item" data-en="Today" data-es="Hoy" data-cat="Adverbs"><span class="en">Today</span>  <span class="es">Hoy</span></li>
+    <li class="item" data-en="Yesterday" data-es="Ayer" data-cat="Adverbs"><span class="en">Yesterday</span>  <span class="es">Ayer</span></li>
+    <li class="item" data-en="Tomorrow" data-es="Mañana" data-cat="Adverbs"><span class="en">Tomorrow</span>  <span class="es">Mañana</span></li>
+    <li class="item" data-en="Tonight" data-es="Esta noche" data-cat="Adverbs"><span class="en">Tonight</span>  <span class="es">Esta noche</span></li>
+    <li class="item" data-en="Soon" data-es="Pronto" data-cat="Adverbs"><span class="en">Soon</span>  <span class="es">Pronto</span></li>
+    <li class="item" data-en="Early" data-es="Temprano" data-cat="Adverbs"><span class="en">Early</span>  <span class="es">Temprano</span></li>
+    <li class="item" data-en="Late" data-es="Tarde" data-cat="Adverbs"><span class="en">Late</span>  <span class="es">Tarde</span></li>
+    <li class="item" data-en="Already" data-es="Ya" data-cat="Adverbs"><span class="en">Already</span>  <span class="es">Ya</span></li>
+    <li class="item" data-en="Still" data-es="Todavía" data-cat="Adverbs"><span class="en">Still</span>  <span class="es">Todavía</span></li>
+    <li class="item" data-en="Yet" data-es="Aún" data-cat="Adverbs"><span class="en">Yet</span>  <span class="es">Aún</span></li>
+    <li class="item" data-en="Recently" data-es="Recientemente" data-cat="Adverbs"><span class="en">Recently</span>  <span class="es">Recientemente</span></li>
+    <li class="item" data-en="Lately" data-es="Últimamente" data-cat="Adverbs"><span class="en">Lately</span>  <span class="es">Últimamente</span></li>
+    <li class="item" data-en="Immediately" data-es="Inmediatamente" data-cat="Adverbs"><span class="en">Immediately</span>  <span class="es">Inmediatamente</span></li>
+    <li class="item" data-en="Right away" data-es="Enseguida" data-cat="Adverbs"><span class="en">Right away</span>  <span class="es">Enseguida</span></li>
+    <li class="item" data-en="Suddenly" data-es="De repente" data-cat="Adverbs"><span class="en">Suddenly</span>  <span class="es">De repente</span></li>
+    <li class="item" data-en="Eventually" data-es="Finalmente" data-cat="Adverbs"><span class="en">Eventually</span>  <span class="es">Finalmente</span></li>
+    <li class="item" data-en="Finally" data-es="Por fin" data-cat="Adverbs"><span class="en">Finally</span>  <span class="es">Por fin</span></li>
+    <li class="item" data-en="Before" data-es="Antes" data-cat="Adverbs"><span class="en">Before</span>  <span class="es">Antes</span></li>
+    <li class="item" data-en="Afterwards" data-es="Después" data-cat="Adverbs"><span class="en">Afterwards</span>  <span class="es">Después</span></li>
+    <li class="item" data-en="Then" data-es="Luego" data-cat="Adverbs"><span class="en">Then</span>  <span class="es">Luego</span></li>
+    <li class="item" data-en="At the same time" data-es="Al mismo tiempo" data-cat="Adverbs"><span class="en">At the same time</span>  <span class="es">Al mismo tiempo</span></li>
+    <li class="item" data-en="Once" data-es="Una vez" data-cat="Adverbs"><span class="en">Once</span>  <span class="es">Una vez</span></li>
+    <li class="item" data-en="Again" data-es="Otra vez" data-cat="Adverbs"><span class="en">Again</span>  <span class="es">Otra vez</span></li>
+    <li class="item" data-en="At last" data-es="Al fin" data-cat="Adverbs"><span class="en">At last</span>  <span class="es">Al fin</span></li>
+
+    <!-- Frequency -->
+    <li class="item" data-en="Always" data-es="Siempre" data-cat="Adverbs"><span class="en">Always</span>  <span class="es">Siempre</span></li>
+    <li class="item" data-en="Usually" data-es="Usualmente" data-cat="Adverbs"><span class="en">Usually</span>  <span class="es">Usualmente</span></li>
+    <li class="item" data-en="Normally" data-es="Normalmente" data-cat="Adverbs"><span class="en">Normally</span>  <span class="es">Normalmente</span></li>
+    <li class="item" data-en="Generally" data-es="Generalmente" data-cat="Adverbs"><span class="en">Generally</span>  <span class="es">Generalmente</span></li>
+    <li class="item" data-en="Often" data-es="A menudo" data-cat="Adverbs"><span class="en">Often</span>  <span class="es">A menudo</span></li>
+    <li class="item" data-en="Frequently" data-es="Frecuentemente" data-cat="Adverbs"><span class="en">Frequently</span>  <span class="es">Frecuentemente</span></li>
+    <li class="item" data-en="Sometimes" data-es="A veces" data-cat="Adverbs"><span class="en">Sometimes</span>  <span class="es">A veces</span></li>
+    <li class="item" data-en="Occasionally" data-es="Ocasionalmente" data-cat="Adverbs"><span class="en">Occasionally</span>  <span class="es">Ocasionalmente</span></li>
+    <li class="item" data-en="Rarely" data-es="Raramente" data-cat="Adverbs"><span class="en">Rarely</span>  <span class="es">Raramente</span></li>
+    <li class="item" data-en="Seldom" data-es="Rara vez" data-cat="Adverbs"><span class="en">Seldom</span>  <span class="es">Rara vez</span></li>
+    <li class="item" data-en="Hardly ever" data-es="Casi nunca" data-cat="Adverbs"><span class="en">Hardly ever</span>  <span class="es">Casi nunca</span></li>
+    <li class="item" data-en="Never" data-es="Nunca" data-cat="Adverbs"><span class="en">Never</span>  <span class="es">Nunca</span></li>
+
+    <!-- Manner -->
+    <li class="item" data-en="Well" data-es="Bien" data-cat="Adverbs"><span class="en">Well</span>  <span class="es">Bien</span></li>
+    <li class="item" data-en="Badly" data-es="Mal" data-cat="Adverbs"><span class="en">Badly</span>  <span class="es">Mal</span></li>
+    <li class="item" data-en="Quickly" data-es="Rápidamente" data-cat="Adverbs"><span class="en">Quickly</span>  <span class="es">Rápidamente</span></li>
+    <li class="item" data-en="Fast" data-es="Rápido" data-cat="Adverbs"><span class="en">Fast</span>  <span class="es">Rápido</span></li>
+    <li class="item" data-en="Slowly" data-es="Lentamente" data-cat="Adverbs"><span class="en">Slowly</span>  <span class="es">Lentamente</span></li>
+    <li class="item" data-en="Carefully" data-es="Con cuidado" data-cat="Adverbs"><span class="en">Carefully</span>  <span class="es">Con cuidado</span></li>
+    <li class="item" data-en="Easily" data-es="Fácilmente" data-cat="Adverbs"><span class="en">Easily</span>  <span class="es">Fácilmente</span></li>
+    <li class="item" data-en="Clearly" data-es="Claramente" data-cat="Adverbs"><span class="en">Clearly</span>  <span class="es">Claramente</span></li>
+    <li class="item" data-en="Directly" data-es="Directamente" data-cat="Adverbs"><span class="en">Directly</span>  <span class="es">Directamente</span></li>
+    <li class="item" data-en="Exactly" data-es="Exactamente" data-cat="Adverbs"><span class="en">Exactly</span>  <span class="es">Exactamente</span></li>
+    <li class="item" data-en="Approximately" data-es="Aproximadamente" data-cat="Adverbs"><span class="en">Approximately</span>  <span class="es">Aproximadamente</span></li>
+    <li class="item" data-en="Together" data-es="Juntos" data-cat="Adverbs"><span class="en">Together</span>  <span class="es">Juntos</span></li>
+    <li class="item" data-en="Separately" data-es="Por separado" data-cat="Adverbs"><span class="en">Separately</span>  <span class="es">Por separado</span></li>
+    <li class="item" data-en="Quietly" data-es="En silencio" data-cat="Adverbs"><span class="en">Quietly</span>  <span class="es">En silencio</span></li>
+    <li class="item" data-en="Loudly" data-es="En voz alta" data-cat="Adverbs"><span class="en">Loudly</span>  <span class="es">En voz alta</span></li>
+    <li class="item" data-en="Politely" data-es="Amablemente" data-cat="Adverbs"><span class="en">Politely</span>  <span class="es">Amablemente</span></li>
+    <li class="item" data-en="Honestly" data-es="Honestamente" data-cat="Adverbs"><span class="en">Honestly</span>  <span class="es">Honestamente</span></li>
+    <li class="item" data-en="Seriously" data-es="En serio" data-cat="Adverbs"><span class="en">Seriously</span>  <span class="es">En serio</span></li>
+    <li class="item" data-en="Naturally" data-es="Naturalmente" data-cat="Adverbs"><span class="en">Naturally</span>  <span class="es">Naturalmente</span></li>
+    <li class="item" data-en="Simply" data-es="Simplemente" data-cat="Adverbs"><span class="en">Simply</span>  <span class="es">Simplemente</span></li>
+    <li class="item" data-en="Barefoot" data-es="Descalzo" data-cat="Adverbs"><span class="en">Barefoot</span>  <span class="es">Descalzo</span></li>
+
+    <!-- Degree / Quantity -->
+    <li class="item" data-en="Too" data-es="Demasiado" data-cat="Adverbs"><span class="en">Too</span>  <span class="es">Demasiado</span></li>
+    <li class="item" data-en="Quite" data-es="Bastante" data-cat="Adverbs"><span class="en">Quite</span>  <span class="es">Bastante</span></li>
+    <li class="item" data-en="Enough" data-es="Suficiente" data-cat="Adverbs"><span class="en">Enough</span>  <span class="es">Suficiente</span></li>
+    <li class="item" data-en="Almost" data-es="Casi" data-cat="Adverbs"><span class="en">Almost</span>  <span class="es">Casi</span></li>
+    <li class="item" data-en="Nearly" data-es="Casi" data-cat="Adverbs"><span class="en">Nearly</span>  <span class="es">Casi</span></li>
+    <li class="item" data-en="Just" data-es="Justo" data-cat="Adverbs"><span class="en">Just</span>  <span class="es">Justo</span></li>
+    <li class="item" data-en="Only" data-es="Solo" data-cat="Adverbs"><span class="en">Only</span>  <span class="es">Solo</span></li>
+    <li class="item" data-en="Exactly" data-es="Exactamente" data-cat="Adverbs"><span class="en">Exactly</span>  <span class="es">Exactamente</span></li>
+    <li class="item" data-en="About" data-es="Aproximadamente" data-cat="Adverbs"><span class="en">About</span>  <span class="es">Aproximadamente</span></li>
+    <li class="item" data-en="Almost always" data-es="Casi siempre" data-cat="Adverbs"><span class="en">Almost always</span>  <span class="es">Casi siempre</span></li>
+    <li class="item" data-en="Barely" data-es="Apenas" data-cat="Adverbs"><span class="en">Barely</span>  <span class="es">Apenas</span></li>
+    <li class="item" data-en="Hardly" data-es="Dificilmente" data-cat="Adverbs"><span class="en">Hardly</span>  <span class="es">Dificilmente</span></li>
+    <li class="item" data-en="Completely" data-es="Completamente" data-cat="Adverbs"><span class="en">Completely</span>  <span class="es">Completamente</span></li>
+    <li class="item" data-en="Totally" data-es="Totalmente" data-cat="Adverbs"><span class="en">Totally</span>  <span class="es">Totalmente</span></li>
+    <li class="item" data-en="Absolutely" data-es="Absolutamente" data-cat="Adverbs"><span class="en">Absolutely</span>  <span class="es">Absolutamente</span></li>
+    <li class="item" data-en="Partly" data-es="Parcialmente" data-cat="Adverbs"><span class="en">Partly</span>  <span class="es">Parcialmente</span></li>
+    <li class="item" data-en="Mostly" data-es="Mayormente" data-cat="Adverbs"><span class="en">Mostly</span>  <span class="es">Mayormente</span></li>
+    <li class="item" data-en="Almost never" data-es="Casi nunca" data-cat="Adverbs"><span class="en">Almost never</span>  <span class="es">Casi nunca</span></li>
+    <li class="item" data-en="At least" data-es="Al menos" data-cat="Adverbs"><span class="en">At least</span>  <span class="es">Al menos</span></li>
+    <li class="item" data-en="At most" data-es="Como mucho" data-cat="Adverbs"><span class="en">At most</span>  <span class="es">Como mucho</span></li>
+    <li class="item" data-en="More" data-es="Más" data-cat="Adverbs"><span class="en">More</span>  <span class="es">Más</span></li>
+    <li class="item" data-en="Less" data-es="Menos" data-cat="Adverbs"><span class="en">Less</span>  <span class="es">Menos</span></li>
+
+    <!-- Place / Direction -->
+    <li class="item" data-en="Here" data-es="Acá" data-cat="Adverbs"><span class="en">Here</span>  <span class="es">Acá</span></li>
+    <li class="item" data-en="There" data-es="Allí" data-cat="Adverbs"><span class="en">There</span>  <span class="es">Allí</span></li>
+    <li class="item" data-en="Over there" data-es="Allá" data-cat="Adverbs"><span class="en">Over there</span>  <span class="es">Allá</span></li>
+    <li class="item" data-en="There (nearby)" data-es="Ahí" data-cat="Adverbs"><span class="en">There (nearby)</span>  <span class="es">Ahí</span></li>
+    <li class="item" data-en="Everywhere" data-es="En todas partes" data-cat="Adverbs"><span class="en">Everywhere</span>  <span class="es">En todas partes</span></li>
+    <li class="item" data-en="Somewhere" data-es="En algún lugar" data-cat="Adverbs"><span class="en">Somewhere</span>  <span class="es">En algún lugar</span></li>
+    <li class="item" data-en="Anywhere" data-es="En cualquier lugar" data-cat="Adverbs"><span class="en">Anywhere</span>  <span class="es">En cualquier lugar</span></li>
+    <li class="item" data-en="Nowhere" data-es="En ningún lugar" data-cat="Adverbs"><span class="en">Nowhere</span>  <span class="es">En ningún lugar</span></li>
+    <li class="item" data-en="Inside" data-es="Adentro" data-cat="Adverbs"><span class="en">Inside</span>  <span class="es">Adentro</span></li>
+    <li class="item" data-en="Outside" data-es="Afuera" data-cat="Adverbs"><span class="en">Outside</span>  <span class="es">Afuera</span></li>
+    <li class="item" data-en="Upstairs" data-es="Arriba" data-cat="Adverbs"><span class="en">Upstairs</span>  <span class="es">Arriba</span></li>
+    <li class="item" data-en="Downstairs" data-es="Abajo" data-cat="Adverbs"><span class="en">Downstairs</span>  <span class="es">Abajo</span></li>
+    <li class="item" data-en="Nearby" data-es="Cerca" data-cat="Adverbs"><span class="en">Nearby</span>  <span class="es">Cerca</span></li>
+    <li class="item" data-en="Far away" data-es="Lejos" data-cat="Adverbs"><span class="en">Far away</span>  <span class="es">Lejos</span></li>
+    <li class="item" data-en="Ahead" data-es="Adelante" data-cat="Adverbs"><span class="en">Ahead</span>  <span class="es">Adelante</span></li>
+    <li class="item" data-en="Behind" data-es="Atrás" data-cat="Adverbs"><span class="en">Behind</span>  <span class="es">Atrás</span></li>
+
+    <!-- Probability / Attitude -->
+    <li class="item" data-en="Probably" data-es="Probablemente" data-cat="Adverbs"><span class="en">Probably</span>  <span class="es">Probablemente</span></li>
+    <li class="item" data-en="Maybe" data-es="Quizás" data-cat="Adverbs"><span class="en">Maybe</span>  <span class="es">Quizás</span></li>
+    <li class="item" data-en="Perhaps" data-es="Tal vez" data-cat="Adverbs"><span class="en">Perhaps</span>  <span class="es">Tal vez</span></li>
+    <li class="item" data-en="Possibly" data-es="Posiblemente" data-cat="Adverbs"><span class="en">Possibly</span>  <span class="es">Posiblemente</span></li>
+    <li class="item" data-en="Certainly" data-es="Ciertamente" data-cat="Adverbs"><span class="en">Certainly</span>  <span class="es">Ciertamente</span></li>
+    <li class="item" data-en="Surely" data-es="Seguro" data-cat="Adverbs"><span class="en">Surely</span>  <span class="es">Seguro</span></li>
+    <li class="item" data-en="Definitely" data-es="Definitivamente" data-cat="Adverbs"><span class="en">Definitely</span>  <span class="es">Definitivamente</span></li>
+    <li class="item" data-en="Apparently" data-es="Aparentemente" data-cat="Adverbs"><span class="en">Apparently</span>  <span class="es">Aparentemente</span></li>
+    <li class="item" data-en="Obviously" data-es="Obviamente" data-cat="Adverbs"><span class="en">Obviously</span>  <span class="es">Obviamente</span></li>
+    <li class="item" data-en="Likely" data-es="Es probable" data-cat="Adverbs"><span class="en">Likely</span>  <span class="es">Es probable</span></li>
+    <li class="item" data-en="Unlikely" data-es="Es improbable" data-cat="Adverbs"><span class="en">Unlikely</span>  <span class="es">Es improbable</span></li>
+
+    <!-- Negation / Modality -->
+    <li class="item" data-en="Not" data-es="No" data-cat="Adverbs"><span class="en">Not</span>  <span class="es">No</span></li>
+    <li class="item" data-en="Almost not" data-es="Apenas si" data-cat="Adverbs"><span class="en">Almost not</span>  <span class="es">Apenas si</span></li>
+  </ul>
+</details>
+
+      <details class="category">
+        <summary><span class="category-title">Foods</span></summary>
+        <ul class="items">
+        <li class="item" data-en="Dish" data-es="Plato" data-cat="Things"><span class="en">Dish</span>  <span class="es">Plato</span></li>
+          <li class="item" data-en="Food" data-es="Comida" data-cat="Things"><span class="en">Food</span>  <span class="es">Comida</span></li>
+          <li class="item" data-en="Fruit" data-es="Fruta" data-cat="Things"><span class="en">Fruit</span>  <span class="es">Fruta</span></li>
+          <li class="item" data-en="Drink" data-es="Bebida" data-cat="Things"><span class="en">Drink</span>  <span class="es">Bebida</span></li>
+          <li class="item" data-en="Vegetable" data-es="Vegetal" data-cat="Things"><span class="en">Vegetable</span>  <span class="es">Vegetal</span></li>
+          <li class="item" data-en="Avocado" data-es="Palta" data-cat="Foods"><span class="en">Avocado</span>  <span class="es">Palta</span></li>
+          <li class="item" data-en="Banana" data-es="Banana" data-cat="Foods"><span class="en">Banana</span>  <span class="es">Banana</span></li>
+          <li class="item" data-en="Apple" data-es="Manzana" data-cat="Foods"><span class="en">Apple</span>  <span class="es">Manzana</span></li>
+          <li class="item" data-en="Orange" data-es="Naranja" data-cat="Foods"><span class="en">Orange</span>  <span class="es">Naranja</span></li>
+          <li class="item" data-en="Pineapple" data-es="Ananá" data-cat="Foods"><span class="en">Pineapple</span>  <span class="es">Ananá</span></li>
+          <li class="item" data-en="Strawberry" data-es="Frutilla" data-cat="Foods"><span class="en">Strawberry</span>  <span class="es">Frutilla</span></li>
+          <li class="item" data-en="Blueberry" data-es="Arándano" data-cat="Foods"><span class="en">Blueberry</span>  <span class="es">Arándano</span></li>
+          <li class="item" data-en="Grape" data-es="Uva" data-cat="Foods"><span class="en">Grape</span>  <span class="es">Uva</span></li>
+          <li class="item" data-en="Lemon" data-es="Limón" data-cat="Foods"><span class="en">Lemon</span>  <span class="es">Limón</span></li>
+          <li class="item" data-en="Mango" data-es="Mango" data-cat="Foods"><span class="en">Mango</span>  <span class="es">Mango</span></li>
+          <li class="item" data-en="Lettuce" data-es="Lechuga" data-cat="Foods"><span class="en">Lettuce</span>  <span class="es">Lechuga</span></li>
+          <li class="item" data-en="Tomato" data-es="Tomate" data-cat="Foods"><span class="en">Tomato</span>  <span class="es">Tomate</span></li>
+          <li class="item" data-en="Cucumber" data-es="Pepino" data-cat="Foods"><span class="en">Cucumber</span>  <span class="es">Pepino</span></li>
+          <li class="item" data-en="Onion" data-es="Cebolla" data-cat="Foods"><span class="en">Onion</span>  <span class="es">Cebolla</span></li>
+          <li class="item" data-en="Garlic" data-es="Ajo" data-cat="Foods"><span class="en">Garlic</span>  <span class="es">Ajo</span></li>
+          <li class="item" data-en="Potato" data-es="Papa" data-cat="Foods"><span class="en">Potato</span>  <span class="es">Papa</span></li>
+          <li class="item" data-en="Carrot" data-es="Zanahoria" data-cat="Foods"><span class="en">Carrot</span>  <span class="es">Zanahoria</span></li>
+          <li class="item" data-en="Broccoli" data-es="Brócoli" data-cat="Foods"><span class="en">Broccoli</span>  <span class="es">Brócoli</span></li>
+          <li class="item" data-en="Cabbage" data-es="Col" data-cat="Foods"><span class="en">Cabbage</span>  <span class="es">Col</span></li>
+          <li class="item" data-en="Mushroom" data-es="Champiñón / hongo" data-cat="Foods"><span class="en">Mushroom</span>  <span class="es">Champiñón / hongo</span></li>
+          <li class="item" data-en="Egg" data-es="Huevo" data-cat="Foods"><span class="en">Egg</span>  <span class="es">Huevo</span></li>
+          <li class="item" data-en="Bread" data-es="Pan" data-cat="Foods"><span class="en">Bread</span>  <span class="es">Pan</span></li>
+          <li class="item" data-en="Cheese" data-es="Queso" data-cat="Foods"><span class="en">Cheese</span>  <span class="es">Queso</span></li>
+          <li class="item" data-en="Milk" data-es="Leche" data-cat="Foods"><span class="en">Milk</span>  <span class="es">Leche</span></li>
+          <li class="item" data-en="Butter" data-es="Manteca" data-cat="Foods"><span class="en">Butter</span>  <span class="es">Manteca</span></li>
+          <li class="item" data-en="Sugar" data-es="Azúcar" data-cat="Foods"><span class="en">Sugar</span>  <span class="es">Azúcar</span></li>
+          <li class="item" data-en="Salt" data-es="Sal" data-cat="Foods"><span class="en">Salt</span>  <span class="es">Sal</span></li>
+          <li class="item" data-en="Pepper" data-es="Pimienta" data-cat="Foods"><span class="en">Pepper</span>  <span class="es">Pimienta</span></li>
+          <li class="item" data-en="Coffee" data-es="Café" data-cat="Foods"><span class="en">Coffee</span>  <span class="es">Café</span></li>
+          <li class="item" data-en="Tea" data-es="Té" data-cat="Foods"><span class="en">Tea</span>  <span class="es">Té</span></li>
+          <li class="item" data-en="Toast" data-es="Tostada" data-cat="Foods"><span class="en">Toast</span>  <span class="es">Tostada</span></li>
+          <li class="item" data-en="Fries" data-es="Papas fritas" data-cat="Foods"><span class="en">Fries</span>  <span class="es">Papas fritas</span></li>
+          <li class="item" data-en="Salad" data-es="Ensalada" data-cat="Foods"><span class="en">Salad</span>  <span class="es">Ensalada</span></li>
+          <li class="item" data-en="Soup" data-es="Sopa" data-cat="Foods"><span class="en">Soup</span>  <span class="es">Sopa</span></li>
+          <li class="item" data-en="Rice" data-es="Arroz" data-cat="Foods"><span class="en">Rice</span>  <span class="es">Arroz</span></li>
+          <li class="item" data-en="Pasta" data-es="Pasta" data-cat="Foods"><span class="en">Pasta</span>  <span class="es">Pasta</span></li>
+          <li class="item" data-en="Meat" data-es="Carne" data-cat="Foods"><span class="en">Meat</span>  <span class="es">Carne</span></li>
+          <li class="item" data-en="Fish" data-es="Pescado" data-cat="Foods"><span class="en">Fish</span>  <span class="es">Pescado</span></li>
+          <li class="item" data-en="Chicken" data-es="Pollo" data-cat="Foods"><span class="en">Chicken</span>  <span class="es">Pollo</span></li>
+          <li class="item" data-en="Duck" data-es="Pato" data-cat="Foods"><span class="en">Duck</span>  <span class="es">Pato</span></li>
+          <li class="item" data-en="Pork" data-es="Cerdo" data-cat="Foods"><span class="en">Pork</span>  <span class="es">Cerdo</span></li>
+          <li class="item" data-en="Beef" data-es="Carne de vaca" data-cat="Foods"><span class="en">Beef</span>  <span class="es">Carne de vaca</span></li>
+          <li class="item" data-en="Lamb" data-es="Lomo" data-cat="Foods"><span class="en">Lamb</span>  <span class="es">Lomo</span></li>
+          <li class="item" data-en="Plate (of food)" data-es="Plato (de comida)" data-cat="Foods"><span class="en">Plate (of food)</span>  <span class="es">Plato (de comida)</span></li>
+<li class="item" data-en="Glass" data-es="Vaso" data-cat="Foods"><span class="en">Glass</span>  <span class="es">Vaso</span></li>
+<li class="item" data-en="Fork" data-es="Tenedor" data-cat="Foods"><span class="en">Fork</span>  <span class="es">Tenedor</span></li>
+<li class="item" data-en="Knife" data-es="Cuchillo" data-cat="Foods"><span class="en">Knife</span>  <span class="es">Cuchillo</span></li>
+<li class="item" data-en="Spoon" data-es="Cuchara" data-cat="Foods"><span class="en">Spoon</span>  <span class="es">Cuchara</span></li>
+<li class="item" data-en="Cutlery" data-es="Cubiertos" data-cat="Foods"><span class="en">Cutlery</span>  <span class="es">Cubiertos</span></li>
+<li class="item" data-en="Napkin" data-es="Servilleta" data-cat="Foods"><span class="en">Napkin</span>  <span class="es">Servilleta</span></li>
+<li class="item" data-en="Table" data-es="Mesa" data-cat="Foods"><span class="en">Table</span>  <span class="es">Mesa</span></li>
+<li class="item" data-en="Chair" data-es="Silla" data-cat="Foods"><span class="en">Chair</span>  <span class="es">Silla</span></li>
+<li class="item" data-en="Beer" data-es="Cerveza" data-cat="Foods"><span class="en">Beer</span>  <span class="es">Cerveza</span></li>
+<li class="item" data-en="Drink (cocktail)" data-es="Trago" data-cat="Foods"><span class="en">Drink (cocktail)</span>  <span class="es">Trago</span></li>
+<li class="item" data-en="Breakfast" data-es="Desayuno" data-cat="Foods"><span class="en">Breakfast</span>  <span class="es">Desayuno</span></li>
+<li class="item" data-en="Lunch" data-es="Almuerzo" data-cat="Foods"><span class="en">Lunch</span>  <span class="es">Almuerzo</span></li>
+<li class="item" data-en="Afternoon snack" data-es="Merienda" data-cat="Foods"><span class="en">Afternoon snack</span>  <span class="es">Merienda</span></li>
+<li class="item" data-en="Dinner" data-es="Cena" data-cat="Foods"><span class="en">Dinner</span>  <span class="es">Cena</span></li>
+<li class="item" data-en="Tip" data-es="Propina" data-cat="Foods"><span class="en">Tip</span>  <span class="es">Propina</span></li>
+<li class="item" data-en="Bottle" data-es="Botella" data-cat="Foods"><span class="en">Bottle</span>  <span class="es">Botella</span></li>
+<li class="item" data-en="Bread" data-es="Pan" data-cat="Foods"><span class="en">Bread</span>  <span class="es">Pan</span></li>
+<li class="item" data-en="Cheese" data-es="Queso" data-cat="Foods"><span class="en">Cheese</span>  <span class="es">Queso</span></li>
+<li class="item" data-en="Meat" data-es="Carne" data-cat="Foods"><span class="en">Meat</span>  <span class="es">Carne</span></li>
+<li class="item" data-en="Fish" data-es="Pescado" data-cat="Foods"><span class="en">Fish</span>  <span class="es">Pescado</span></li>
+<li class="item" data-en="Fruit" data-es="Fruta" data-cat="Foods"><span class="en">Fruit</span>  <span class="es">Fruta</span></li>
+<li class="item" data-en="Vegetable" data-es="Verdura" data-cat="Foods"><span class="en">Vegetable</span>  <span class="es">Verdura</span></li>
+        </ul>
+      </details>
+
+      <details class="category">
+        <summary><span class="category-title">Animals</span></summary>
+        <ul class="items">
+          <li class="item" data-en="Dog" data-es="Perro" data-cat="Animals"><span class="en">Dog</span>  <span class="es">Perro</span></li>
+          <li class="item" data-en="Cat" data-es="Gato" data-cat="Animals"><span class="en">Cat</span>  <span class="es">Gato</span></li>
+          <li class="item" data-en="Bird" data-es="Pájaro" data-cat="Animals"><span class="en">Bird</span>  <span class="es">Pájaro</span></li>
+          <li class="item" data-en="Fish" data-es="Pez" data-cat="Animals"><span class="en">Fish</span>  <span class="es">Pez</span></li>
+          <li class="item" data-en="Rabbit" data-es="Conejo" data-cat="Animals"><span class="en">Rabbit</span>  <span class="es">Conejo</span></li>
+          <li class="item" data-en="Horse" data-es="Caballo" data-cat="Animals"><span class="en">Horse</span>  <span class="es">Caballo</span></li>
+          <li class="item" data-en="Cow" data-es="Vaca" data-cat="Animals"><span class="en">Cow</span>  <span class="es">Vaca</span></li>
+          <li class="item" data-en="Sheep" data-es="Oveja" data-cat="Animals"><span class="en">Sheep</span>  <span class="es">Oveja</span></li>
+          <li class="item" data-en="Goat" data-es="Cabra" data-cat="Animals"><span class="en">Goat</span>  <span class="es">Cabra</span></li>
+          <li class="item" data-en="Pig" data-es="Cerdo" data-cat="Animals"><span class="en">Pig</span>  <span class="es">Cerdo</span></li>
+          <li class="item" data-en="Chicken" data-es="Pollo" data-cat="Animals"><span class="en">Chicken</span>  <span class="es">Pollo</span></li>
+          <li class="item" data-en="Duck" data-es="Pato" data-cat="Animals"><span class="en">Duck</span>  <span class="es">Pato</span></li>
+        </ul>
+      </details>
+
+      <details class="category">
+  <summary><span class="category-title">I am...</span></summary>
+  <ul class="items">
+    <li class="item" data-en="Im hungry" data-es="Tengo hambre" data-cat="I AM..."><span class="en">Im hungry</span>  <span class="es">Tengo hambre</span></li>
+    <li class="item" data-en="Im thirsty" data-es="Tengo sed" data-cat="I AM..."><span class="en">Im thirsty</span>  <span class="es">Tengo sed</span></li>
+    <li class="item" data-en="Im tired" data-es="Estoy cansado" data-cat="I AM..."><span class="en">Im tired</span>  <span class="es">Estoy cansado</span></li>
+    <li class="item" data-en="Im sleepy" data-es="Tengo sueño" data-cat="I AM..."><span class="en">Im sleepy</span>  <span class="es">Tengo sueño</span></li>
+    <li class="item" data-en="Im hot" data-es="Tengo calor" data-cat="I AM..."><span class="en">Im hot</span>  <span class="es">Tengo calor</span></li>
+    <li class="item" data-en="Im cold" data-es="Tengo frío" data-cat="I AM..."><span class="en">Im cold</span>  <span class="es">Tengo frío</span></li>
+    <li class="item" data-en="Im sick" data-es="Estoy enfermo" data-cat="I AM..."><span class="en">Im sick</span>  <span class="es">Estoy enfermo</span></li>
+    <li class="item" data-en="Im healthy" data-es="Estoy sano" data-cat="I AM..."><span class="en">Im healthy</span>  <span class="es">Estoy sano</span></li>
+    <li class="item" data-en="Im nervous" data-es="Estoy nervioso" data-cat="I AM..."><span class="en">Im nervous</span>  <span class="es">Estoy nervioso</span></li>
+    <li class="item" data-en="Im calm" data-es="Estoy tranquilo" data-cat="I AM..."><span class="en">Im calm</span>  <span class="es">Estoy tranquilo</span></li>
+    <li class="item" data-en="Im happy" data-es="Estoy feliz" data-cat="I AM..."><span class="en">Im happy</span>  <span class="es">Estoy feliz</span></li>
+    <li class="item" data-en="Im sad" data-es="Estoy triste" data-cat="I AM..."><span class="en">Im sad</span>  <span class="es">Estoy triste</span></li>
+    <li class="item" data-en="Im angry" data-es="Estoy enojado" data-cat="I AM..."><span class="en">Im angry</span>  <span class="es">Estoy enojado</span></li>
+    <li class="item" data-en="Im scared" data-es="Tengo miedo" data-cat="I AM..."><span class="en">Im scared</span>  <span class="es">Tengo miedo</span></li>
+    <li class="item" data-en="Im excited" data-es="Estoy emocionado" data-cat="I AM..."><span class="en">Im excited</span>  <span class="es">Estoy emocionado</span></li>
+    <li class="item" data-en="Im bored" data-es="Estoy aburrido" data-cat="I AM..."><span class="en">Im bored</span>  <span class="es">Estoy aburrido</span></li>
+    <li class="item" data-en="Im surprised" data-es="Estoy sorprendido" data-cat="I AM..."><span class="en">Im surprised</span>  <span class="es">Estoy sorprendido</span></li>
+    <li class="item" data-en="Im confused" data-es="Estoy confundido" data-cat="I AM..."><span class="en">Im confused</span>  <span class="es">Estoy confundido</span></li>
+    <li class="item" data-en="Im relaxed" data-es="Estoy relajado" data-cat="I AM..."><span class="en">Im relaxed</span>  <span class="es">Estoy relajado</span></li>
+    <li class="item" data-en="Im stressed" data-es="Estoy estresado" data-cat="I AM..."><span class="en">Im stressed</span>  <span class="es">Estoy estresado</span></li>
+    <li class="item" data-en="Im in love" data-es="Estoy enamorado" data-cat="I AM..."><span class="en">Im in love</span>  <span class="es">Estoy enamorado</span></li>
+    <li class="item" data-en="Im lonely" data-es="Estoy solo" data-cat="I AM..."><span class="en">Im lonely</span>  <span class="es">Estoy solo</span></li>
+    <li class="item" data-en="Im grateful" data-es="Estoy agradecido" data-cat="I AM..."><span class="en">Im grateful</span>  <span class="es">Estoy agradecido</span></li>
+    <li class="item" data-en="Im lucky" data-es="Soy afortunado" data-cat="I AM..."><span class="en">Im lucky</span>  <span class="es">Soy afortunado</span></li>
+    <li class="item" data-en="Im strong" data-es="Soy fuerte" data-cat="I AM..."><span class="en">Im strong</span>  <span class="es">Soy fuerte</span></li>
+    <li class="item" data-en="Im weak" data-es="Soy débil" data-cat="I AM..."><span class="en">Im weak</span>  <span class="es">Soy débil</span></li>
+    <li class="item" data-en="Im busy" data-es="Estoy ocupado" data-cat="I AM..."><span class="en">Im busy</span>  <span class="es">Estoy ocupado</span></li>
+    <li class="item" data-en="Im free" data-es="Estoy libre" data-cat="I AM..."><span class="en">Im free</span>  <span class="es">Estoy libre</span></li>
+    <li class="item" data-en="Im rich" data-es="Soy rico" data-cat="I AM..."><span class="en">Im rich</span>  <span class="es">Soy rico</span></li>
+    <li class="item" data-en="Im poor" data-es="Soy pobre" data-cat="I AM..."><span class="en">Im poor</span>  <span class="es">Soy pobre</span></li>
+    <li class="item" data-en="Im smart" data-es="Soy inteligente" data-cat="I AM..."><span class="en">Im smart</span>  <span class="es">Soy inteligente</span></li>
+    <li class="item" data-en="Im dumb" data-es="Soy tonto" data-cat="I AM..."><span class="en">Im dumb</span>  <span class="es">Soy tonto</span></li>
+    <li class="item" data-en="Im funny" data-es="Soy divertido" data-cat="I AM..."><span class="en">Im funny</span>  <span class="es">Soy divertido</span></li>
+  </ul>
+</details>
+<details class="category">
+  <summary><span class="category-title">Possessive Adjectives</span></summary>
+  <ul class="items">
+    <li class="item" data-en="My" data-es="Mi, Mis" data-cat="Possessive Adjectives"><span class="en">My</span>  <span class="es">Mi, Mis</span></li>
+    <li class="item" data-en="Your (singular, informal)" data-es="Tu, Tus" data-cat="Possessive Adjectives"><span class="en">Your (singular, informal)</span>  <span class="es">Tu, Tus</span></li>
+    <li class="item" data-en="His" data-es="Su, Sus" data-cat="Possessive Adjectives"><span class="en">His</span>  <span class="es">Su, Sus</span></li>
+    <li class="item" data-en="Her" data-es="Su, Sus" data-cat="Possessive Adjectives"><span class="en">Her</span>  <span class="es">Su, Sus</span></li>
+    <li class="item" data-en="Its" data-es="Su, Sus" data-cat="Possessive Adjectives"><span class="en">Its</span>  <span class="es">Su, Sus</span></li>
+    <li class="item" data-en="Our" data-es="Nuestro, Nuestra, Nuestros, Nuestras" data-cat="Possessive Adjectives"><span class="en">Our</span>  <span class="es">Nuestro, Nuestra, Nuestros, Nuestras</span></li>
+    <li class="item" data-en="Your (plural, LatAm/formal)" data-es="Su, Sus" data-cat="Possessive Adjectives"><span class="en">Your (plural, LatAm/formal)</span>  <span class="es">Su, Sus</span></li>
+    <li class="item" data-en="Their" data-es="Su, Sus" data-cat="Possessive Adjectives"><span class="en">Their</span>  <span class="es">Su, Sus</span></li>
+  </ul>
+</details>
+
+<details class="category">
+  <summary><span class="category-title">Possessive Pronouns</span></summary>
+  <ul class="items">
+    <li class="item" data-en="Mine" data-es="Mío, Mía, Míos, Mías" data-cat="Possessive Pronouns"><span class="en">Mine</span>  <span class="es">Mío, Mía, Míos, Mías</span></li>
+    <li class="item" data-en="Yours (singular, informal)" data-es="Tuyo, Tuya, Tuyos, Tuyas" data-cat="Possessive Pronouns"><span class="en">Yours (singular, informal)</span>  <span class="es">Tuyo, Tuya, Tuyos, Tuyas</span></li>
+    <li class="item" data-en="His" data-es="Suyo, Suya, Suyos, Suyas (de él)" data-cat="Possessive Pronouns"><span class="en">His</span>  <span class="es">Suyo, Suya, Suyos, Suyas (de él)</span></li>
+    <li class="item" data-en="Hers" data-es="Suyo, Suya, Suyos, Suyas (de ella)" data-cat="Possessive Pronouns"><span class="en">Hers</span>  <span class="es">Suyo, Suya, Suyos, Suyas (de ella)</span></li>
+    <li class="item" data-en="Its" data-es="Suyo, Suya, Suyos, Suyas" data-cat="Possessive Pronouns"><span class="en">Its</span>  <span class="es">Suyo, Suya, Suyos, Suyas</span></li>
+    <li class="item" data-en="Ours" data-es="Nuestro, Nuestra, Nuestros, Nuestras" data-cat="Possessive Pronouns"><span class="en">Ours</span>  <span class="es">Nuestro, Nuestra, Nuestros, Nuestras</span></li>
+    <li class="item" data-en="Yours (plural, LatAm/formal)" data-es="Suyo, Suya, Suyos, Suyas" data-cat="Possessive Pronouns"><span class="en">Yours (plural, LatAm/formal)</span>  <span class="es">Suyo, Suya, Suyos, Suyas</span></li>
+    <li class="item" data-en="Theirs" data-es="Suyo, Suya, Suyos, Suyas (de ellos/de ellas)" data-cat="Possessive Pronouns"><span class="en">Theirs</span>  <span class="es">Suyo, Suya, Suyos, Suyas (de ellos/de ellas)</span></li>
+  </ul>
+</details>
+      <details class="category">
+        <summary><span class="category-title">Phrases</span></summary>
+        <ul class="items">
+          <li class="item" data-en="I love you" data-es="Te amo" data-cat="Phrases"><span class="en">I love you</span>  <span class="es">Te amo</span></li>
+<li class="item" data-en="I hate you" data-es="Te odio" data-cat="Phrases"><span class="en">I hate you</span>  <span class="es">Te odio</span></li>
+<li class="item" data-en="I like ..." data-es="Me gusta..." data-cat="Phrases"><span class="en">I like ...</span>  <span class="es">Me gusta...</span></li>
+<li class="item" data-en="I don't like ..." data-es="No me gusta ..." data-cat="Phrases"><span class="en">I don't like ...</span>  <span class="es">No me gusta ...</span></li>
+<li class="item" data-en="Where is the bathroom?" data-es="¿Dónde está el baño?" data-cat="Phrases"><span class="en">Where is the bathroom?</span>  <span class="es">¿Dónde está el baño?</span></li>
+<li class="item" data-en="Can you help me?" data-es="¿Podés ayudarme?" data-cat="Phrases"><span class="en">Can you help me?</span>  <span class="es">¿Podés ayudarme?</span></li>
+<li class="item" data-en="Hello, how are you?" data-es="Hola, ¿cómo estás?" data-cat="Phrases"><span class="en">Hello, how are you?</span>  <span class="es">Hola, ¿cómo estás?</span></li>
+<li class="item" data-en="Good morning" data-es="Buenos días" data-cat="Phrases"><span class="en">Good morning</span>  <span class="es">Buenos días</span></li>
+<li class="item" data-en="Good afternoon" data-es="Buenas tardes" data-cat="Phrases"><span class="en">Good afternoon</span>  <span class="es">Buenas tardes</span></li>
+<li class="item" data-en="Good evening" data-es="Buenas noches" data-cat="Phrases"><span class="en">Good evening</span>  <span class="es">Buenas noches</span></li>
+<li class="item" data-en="Nice to meet you" data-es="Mucho gusto" data-cat="Phrases"><span class="en">Nice to meet you</span>  <span class="es">Mucho gusto</span></li>
+<li class="item" data-en="What is your name?" data-es="¿Cómo te llamás?" data-cat="Phrases"><span class="en">What is your name?</span>  <span class="es">¿Cómo te llamás?</span></li>
+<li class="item" data-en="My name is Martin" data-es="Me llamo Martín" data-cat="Phrases"><span class="en">My name is Martin</span>  <span class="es">Me llamo Martín</span></li>
+<li class="item" data-en="Where are you from?" data-es="¿De dónde sos?" data-cat="Phrases"><span class="en">Where are you from?</span>  <span class="es">¿De dónde sos?</span></li>
+<li class="item" data-en="I am from New Zealand" data-es="Soy de Nueva Zelanda" data-cat="Phrases"><span class="en">I am from New Zealand</span>  <span class="es">Soy de Nueva Zelanda</span></li>
+<li class="item" data-en="Do you speak English?" data-es="¿Hablás inglés?" data-cat="Phrases"><span class="en">Do you speak English?</span>  <span class="es">¿Hablás inglés?</span></li>
+<li class="item" data-en="Where is the bus station?" data-es="¿Dónde está la estación de buses?" data-cat="Phrases"><span class="en">Where is the bus station?</span>  <span class="es">¿Dónde está la estación de buses?</span></li>
+<li class="item" data-en="Where is the train station?" data-es="¿Dónde está la estación de tren?" data-cat="Phrases"><span class="en">Where is the train station?</span>  <span class="es">¿Dónde está la estación de tren?</span></li>
+<li class="item" data-en="Where is the airport?" data-es="¿Dónde está el aeropuerto?" data-cat="Phrases"><span class="en">Where is the airport?</span>  <span class="es">¿Dónde está el aeropuerto?</span></li>
+<li class="item" data-en="How do I get to the city center?" data-es="¿Cómo llego al centro?" data-cat="Phrases"><span class="en">How do I get to the city center?</span>  <span class="es">¿Cómo llego al centro?</span></li>
+<li class="item" data-en="Can you show me on the map?" data-es="Podés mostrarme en el mapa?" data-cat="Phrases"><span class="en">Can you show me on the map?</span>  <span class="es">Podés mostrarme en el mapa?</span></li>
+<li class="item" data-en="Is it far from here?" data-es="¿Está lejos de acá?" data-cat="Phrases"><span class="en">Is it far from here?</span>  <span class="es">¿Está lejos de acá?</span></li>
+<li class="item" data-en="Go straight ahead" data-es="Andá derecho" data-cat="Phrases"><span class="en">Go straight ahead</span>  <span class="es">Andá derecho</span></li>
+<li class="item" data-en="Turn left" data-es="Gira a la izquierda" data-cat="Phrases"><span class="en">Turn left</span>  <span class="es">Gira a la izquierda</span></li>
+<li class="item" data-en="Turn right" data-es="Gira a la derecha" data-cat="Phrases"><span class="en">Turn right</span>  <span class="es">Gira a la derecha</span></li>
+<li class="item" data-en="I need a taxi" data-es="Necesito un taxi" data-cat="Phrases"><span class="en">I need a taxi</span>  <span class="es">Necesito un taxi</span></li>
+<li class="item" data-en="Stop here, please" data-es="Pará acá, por favor" data-cat="Phrases"><span class="en">Stop here, please</span>  <span class="es">Pará acá, por favor</span></li>
+<li class="item" data-en="How much is the fare?" data-es="¿Cuánto cuesta el pasaje?" data-cat="Phrases"><span class="en">How much is the fare?</span>  <span class="es">¿Cuánto cuesta el pasaje?</span></li>
+<li class="item" data-en="Can you take me to this address?" data-es="¿Me podés llevar a esta dirección?" data-cat="Phrases"><span class="en">Can you take me to this address?</span>  <span class="es">¿Me podés llevar a esta dirección?</span></li>
+<li class="item" data-en="I’d like a ticket to Buenos Aires" data-es="Quiero un boleto a Buenos Aires" data-cat="Phrases"><span class="en">I’d like a ticket to Buenos Aires</span>  <span class="es">Quiero un boleto a Buenos Aires</span></li>
+<li class="item" data-en="What time does the train leave?" data-es="¿A qué hora sale el tren?" data-cat="Phrases"><span class="en">What time does the train leave?</span>  <span class="es">¿A qué hora sale el tren?</span></li>
+<li class="item" data-en="What time does the bus arrive?" data-es="¿A qué hora llega el bus?" data-cat="Phrases"><span class="en">What time does the bus arrive?</span>  <span class="es">¿A qué hora llega el bus?</span></li>
+<li class="item" data-en="Is this the bus to…?" data-es="¿Este es el colectivo a…?" data-cat="Phrases"><span class="en">Is this the bus to…?</span>  <span class="es">¿Este es el colectivo a…?</span></li>
+<li class="item" data-en="Is there a direct flight?" data-es="¿Hay un vuelo directo?" data-cat="Phrases"><span class="en">Is there a direct flight?</span>  <span class="es">¿Hay un vuelo directo?</span></li>
+<li class="item" data-en="How long is the trip?" data-es="¿Cuánto dura el viaje?" data-cat="Phrases"><span class="en">How long is the trip?</span>  <span class="es">¿Cuánto dura el viaje?</span></li>
+<li class="item" data-en="A table for two, please" data-es="Una mesa para dos, por favor" data-cat="Phrases"><span class="en">A table for two, please</span>  <span class="es">Una mesa para dos, por favor</span></li>
+<li class="item" data-en="Can I see the menu?" data-es="¿Puedo ver el menú?" data-cat="Phrases"><span class="en">Can I see the menu?</span>  <span class="es">¿Puedo ver el menú?</span></li>
+<li class="item" data-en="What do you recommend?" data-es="¿Qué me recomendás?" data-cat="Phrases"><span class="en">What do you recommend?</span>  <span class="es">¿Qué me recomendás?</span></li>
+<li class="item" data-en="I would like this dish" data-es="Quiero este plato" data-cat="Phrases"><span class="en">I would like this dish</span>  <span class="es">Quiero este plato</span></li>
+<li class="item" data-en="I am vegetarian" data-es="Soy vegetariano" data-cat="Phrases"><span class="en">I am vegetarian</span>  <span class="es">Soy vegetariano</span></li>
+<li class="item" data-en="I am allergic to nuts" data-es="Soy alérgico a las nueces" data-cat="Phrases"><span class="en">I am allergic to nuts</span>  <span class="es">Soy alérgico a las nueces</span></li>
+<li class="item" data-en="Without meat, please" data-es="Sin carne, por favor" data-cat="Phrases"><span class="en">Without meat, please</span>  <span class="es">Sin carne, por favor</span></li>
+<li class="item" data-en="Without cheese, please" data-es="Sin queso, por favor" data-cat="Phrases"><span class="en">Without cheese, please</span>  <span class="es">Sin queso, por favor</span></li>
+<li class="item" data-en="Water without gas, please" data-es="Agua sin gas, por favor" data-cat="Phrases"><span class="en">Water without gas, please</span>  <span class="es">Agua sin gas, por favor</span></li>
+<li class="item" data-en="A beer, please" data-es="Una cerveza, por favor" data-cat="Phrases"><span class="en">A beer, please</span>  <span class="es">Una cerveza, por favor</span></li>
+<li class="item" data-en="Can you give me a discount?" data-es="Me podés dar un descuento?" data-cat="Phrases"><span class="en">Can you give me a discount?</span>  <span class="es">Me podés dar un descuento?</span></li>
+<li class="item" data-en="Do you accept credit cards?" data-es="Aceptás tarjeta de crédito?" data-cat="Phrases"><span class="en">Do you accept credit cards?</span>  <span class="es">Aceptás tarjeta de crédito?</span></li>
+<li class="item" data-en="Do you accept cash?" data-es="Aceptás efectivo?" data-cat="Phrases"><span class="en">Do you accept cash?</span>  <span class="es">Aceptás efectivo?</span></li>
+<li class="item" data-en="Where is the nearest ATM?" data-es="¿Dónde está el cajero automático más cercano?" data-cat="Phrases"><span class="en">Where is the nearest ATM?</span>  <span class="es">¿Dónde está el cajero automático más cercano?</span></li>
+<li class="item" data-en="Can I pay with dollars?" data-es="¿Puedo pagar con dólares?" data-cat="Phrases"><span class="en">Can I pay with dollars?</span>  <span class="es">¿Puedo pagar con dólares?</span></li>
+<li class="item" data-en="I’ll take it" data-es="Me lo llevo" data-cat="Phrases"><span class="en">I’ll take it</span>  <span class="es">Me lo llevo</span></li>
+<li class="item" data-en="Can I try it on?" data-es="¿Me lo puedo probar?" data-cat="Phrases"><span class="en">Can I try it on?</span>  <span class="es">¿Me lo puedo probar?</span></li>
+<li class="item" data-en="Do you have it in another size?" data-es="Lo tenés en otra talla?" data-cat="Phrases"><span class="en">Do you have it in another size?</span>  <span class="es">Lo tenés en otra talla?</span></li>
+<li class="item" data-en="I have a reservation" data-es="Tengo una reserva" data-cat="Phrases"><span class="en">I have a reservation</span>  <span class="es">Tengo una reserva</span></li>
+<li class="item" data-en="I would like to check in" data-es="Quisiera registrarme" data-cat="Phrases"><span class="en">I would like to check in</span>  <span class="es">Quisiera registrarme</span></li>
+<li class="item" data-en="I would like to check out" data-es="Quisiera hacer el check-out" data-cat="Phrases"><span class="en">I would like to check out</span>  <span class="es">Quisiera hacer el check-out</span></li>
+<li class="item" data-en="Do you have a room available?" data-es="¿Tienen una habitación disponible?" data-cat="Phrases"><span class="en">Do you have a room available?</span>  <span class="es">¿Tienen una habitación disponible?</span></li>
+<li class="item" data-en="How much is a room per night?" data-es="¿Cuánto cuesta la habitación por noche?" data-cat="Phrases"><span class="en">How much is a room per night?</span>  <span class="es">¿Cuánto cuesta la habitación por noche?</span></li>
+<li class="item" data-en="Is breakfast included?" data-es="¿Está incluido el desayuno?" data-cat="Phrases"><span class="en">Is breakfast included?</span>  <span class="es">¿Está incluido el desayuno?</span></li>
+
+        </ul>
+      </details>
+      <details class="category">
+  <summary><span class="category-title">Indefinite / Other Words</span></summary>
+  <ul class="items">
+    <li class="item" data-en="Other" data-es="Otro, Otra, Otros, Otras" data-cat="Indefinites"><span class="en">Other</span>  <span class="es">Otro, Otra, Otros, Otras</span></li>
+    <li class="item" data-en="Another" data-es="Otro, Otra" data-cat="Indefinites"><span class="en">Another</span>  <span class="es">Otro, Otra</span></li>
+    <li class="item" data-en="Else" data-es="Más, Otro" data-cat="Indefinites"><span class="en">Else</span>  <span class="es">Más, Otro</span></li>
+    <li class="item" data-en="Something else" data-es="Otra cosa" data-cat="Indefinites"><span class="en">Something else</span>  <span class="es">Otra cosa</span></li>
+    <li class="item" data-en="Someone else" data-es="Otro, Otra" data-cat="Indefinites"><span class="en">Someone else</span>  <span class="es">Otro, Otra</span></li>
+    <li class="item" data-en="Somewhere else" data-es="En otro lugar" data-cat="Indefinites"><span class="en">Somewhere else</span>  <span class="es">En otro lugar</span></li>
+    <li class="item" data-en="Anything else?" data-es="¿Algo más?" data-cat="Indefinites"><span class="en">Anything else?</span>  <span class="es">¿Algo más?</span></li>
+    <li class="item" data-en="Nothing else" data-es="Nada más" data-cat="Indefinites"><span class="en">Nothing else</span>  <span class="es">Nada más</span></li>
+    <li class="item" data-en="Nobody else" data-es="Nadie más" data-cat="Indefinites"><span class="en">Nobody else</span>  <span class="es">Nadie más</span></li>
+    <li class="item" data-en="Everybody else" data-es="Todos los demás" data-cat="Indefinites"><span class="en">Everybody else</span>  <span class="es">Todos los demás</span></li>
+  </ul>
+</details>
+    </section>
+    
+<br>
+  </main>
+
+  <!-- Quiz Modal -->
+  <div id="quizModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="quizContainer">
+        <h2>Spanish Quiz</h2>
+        <div id="questionContainer">
+          <p id="questionText"></p>
+          <div id="optionsContainer"></div>
+        </div>
+        <div id="resultContainer" style="display: none;">
+          <h3>Your Score: <span id="scoreText"></span></h3>
+          <button id="restartBtn">Test Again</button>
+        </div>
+        <button id="nextBtn" style="display: none;">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="js/espanol.js"></script>
+</body>
+</html>
