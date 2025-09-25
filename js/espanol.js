@@ -265,26 +265,31 @@
     const isRegularPage = document.title.includes('Regular');
 
     if (isRegularPage) {
-      // Collect all verb forms (without pronouns) for random options
-      const allVerbForms = new Set();
-      const tables = document.querySelectorAll('table');
-      tables.forEach(table => {
-        const conjugations = table.querySelectorAll('.conjugation');
-        conjugations.forEach(conj => {
-          const text = conj.textContent.trim();
-          const parts = text.split(' ');
-          if (parts.length >= 2) {
-            const verbForm = parts.slice(1).join(' '); // Remove pronoun
-            allVerbForms.add(verbForm);
-          }
-        });
-      });
-
       // Generate questions from verb tables
+      const tables = document.querySelectorAll('table');
       tables.forEach(table => {
         const rows = table.querySelectorAll('tbody tr');
         const categoryTitle = table.closest('.category').querySelector('.category-title').textContent;
         const verb = categoryTitle.split(' ')[0]; // e.g., HABLAR
+        // Collect all verb forms for this verb
+        const allVerbForms = [];
+        rows.forEach(row => {
+          const cells = row.querySelectorAll('td');
+          if (cells.length >= 2) {
+            const conjugations = cells[1].querySelectorAll('.conjugation');
+            conjugations.forEach(conj => {
+              const text = conj.textContent.trim();
+              const parts = text.split(' ');
+              if (parts.length >= 2) {
+                const verbForm = parts.slice(1).join(' '); // Remove pronoun
+                if (!allVerbForms.includes(verbForm)) {
+                  allVerbForms.push(verbForm);
+                }
+              }
+            });
+          }
+        });
+        // Now generate questions
         rows.forEach(row => {
           const cells = row.querySelectorAll('td');
           if (cells.length >= 2) {
@@ -296,8 +301,17 @@
               const parts = fullText.split(' ');
               const verbForm = parts.slice(1).join(' '); // Correct verb form without pronoun
               const options = [verbForm];
+              // Add other conjugations of the same verb
+              const otherForms = allVerbForms.filter(f => f !== verbForm);
+              while (options.length < 8 && otherForms.length > 0) {
+                const randomIndex = Math.floor(Math.random() * otherForms.length);
+                const randomForm = otherForms.splice(randomIndex, 1)[0];
+                options.push(randomForm);
+              }
+              // If still not enough, add some common wrong
+              const commonWrong = ['hablo', 'comes', 'vamos', 'son', 'eres', 'tiene', 'hacen', 'digo'];
               while (options.length < 8) {
-                const randomForm = Array.from(allVerbForms)[Math.floor(Math.random() * allVerbForms.size)];
+                const randomForm = commonWrong[Math.floor(Math.random() * commonWrong.length)];
                 if (!options.includes(randomForm)) {
                   options.push(randomForm);
                 }
@@ -326,6 +340,25 @@
           const rows = table.querySelectorAll('tbody tr');
           const categoryTitle = table.closest('.category').querySelector('.category-title').textContent;
           const verb = categoryTitle.split(' ')[1] || categoryTitle.split(' ')[0]; // e.g., SER, ESTAR
+          // Collect all verb forms for this verb
+          const allVerbForms = [];
+          rows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            if (cells.length >= 2) {
+              const conjugations = cells[1].querySelectorAll('.conjugation');
+              conjugations.forEach(conj => {
+                const fullText = conj.textContent.trim();
+                const parts = fullText.split(' ');
+                if (parts.length >= 2) {
+                  const verbForm = parts.slice(1).join(' ');
+                  if (!allVerbForms.includes(verbForm)) {
+                    allVerbForms.push(verbForm);
+                  }
+                }
+              });
+            }
+          });
+          // Now generate questions
           rows.forEach(row => {
             const cells = row.querySelectorAll('td');
             if (cells.length >= 2) {
@@ -340,7 +373,14 @@
                     const person = parts[0]; // yo, vos, él/ella, etc.
                     const verbForm = parts.slice(1).join(' '); // The actual conjugation
                     const options = [verbForm];
-                    // Add some common wrong options
+                    // Add other conjugations of the same verb
+                    const otherForms = allVerbForms.filter(f => f !== verbForm);
+                    while (options.length < 8 && otherForms.length > 0) {
+                      const randomIndex = Math.floor(Math.random() * otherForms.length);
+                      const randomForm = otherForms.splice(randomIndex, 1)[0];
+                      options.push(randomForm);
+                    }
+                    // If still not enough, add some common wrong (but unlikely)
                     const commonWrong = ['hablo', 'comes', 'vamos', 'son', 'eres', 'tiene', 'hacen', 'digo'];
                     while (options.length < 8) {
                       const randomForm = commonWrong[Math.floor(Math.random() * commonWrong.length)];
@@ -439,6 +479,212 @@
             } else if (subcategoryTitle.includes('Common Verbs') || subcategoryTitle.includes('Verbs') || powerVerbs.some(verb => en.toLowerCase().includes(verb.toLowerCase()) || es.toLowerCase().includes(verb.toLowerCase()))) {
               powerVerbQuestions.push(questionObj);
             } else if (!categoryTitle.includes('Week 1 Power verbs')) {
+              vocabularyQuestions.push(questionObj);
+            }
+          }
+        });
+
+        // Select questions: 3 conjugations, 2 survival, 2 vocabulary, 3 power verbs
+        const selectedConjugations = shuffleArray(conjugationQuestions).slice(0, Math.min(3, conjugationQuestions.length));
+        const selectedSurvival = shuffleArray(survivalQuestions).slice(0, Math.min(2, survivalQuestions.length));
+        const selectedVocabulary = shuffleArray(vocabularyQuestions).slice(0, Math.min(2, vocabularyQuestions.length));
+        const selectedPowerVerbs = shuffleArray(powerVerbQuestions).slice(0, Math.min(3, powerVerbQuestions.length));
+
+        questions = shuffleArray([...selectedConjugations, ...selectedSurvival, ...selectedVocabulary, ...selectedPowerVerbs]);
+
+        // If we don't have 10 questions, fill with more from available categories
+        while (questions.length < 10) {
+          if (selectedPowerVerbs.length < powerVerbQuestions.length) {
+            const remaining = powerVerbQuestions.filter(q => !selectedPowerVerbs.includes(q));
+            if (remaining.length > 0) {
+              questions.push(remaining[0]);
+              selectedPowerVerbs.push(remaining[0]);
+            }
+          }
+          if (questions.length >= 10) break;
+
+          if (selectedConjugations.length < conjugationQuestions.length) {
+            const remaining = conjugationQuestions.filter(q => !selectedConjugations.includes(q));
+            if (remaining.length > 0) {
+              questions.push(remaining[0]);
+              selectedConjugations.push(remaining[0]);
+            }
+          }
+          if (questions.length >= 10) break;
+
+          if (selectedVocabulary.length < vocabularyQuestions.length) {
+            const remaining = vocabularyQuestions.filter(q => !selectedVocabulary.includes(q));
+            if (remaining.length > 0) {
+              questions.push(remaining[0]);
+              selectedVocabulary.push(remaining[0]);
+            }
+          }
+          if (questions.length >= 10) break;
+
+          if (selectedSurvival.length < survivalQuestions.length) {
+            const remaining = survivalQuestions.filter(q => !selectedSurvival.includes(q));
+            if (remaining.length > 0) {
+              questions.push(remaining[0]);
+              selectedSurvival.push(remaining[0]);
+            }
+          }
+          if (questions.length >= 10) break;
+        }
+
+        // Final shuffle to randomize order
+        questions = shuffleArray(questions);
+
+      } else if (document.title.includes('Week 2')) {
+        const conjugationQuestions = [];
+        const survivalQuestions = [];
+        const vocabularyQuestions = [];
+        const powerVerbQuestions = [];
+
+        // Generate conjugation questions from verb tables
+        const tables = document.querySelectorAll('table');
+        tables.forEach(table => {
+          const rows = table.querySelectorAll('tbody tr');
+          const categoryTitle = table.closest('.category').querySelector('.category-title').textContent;
+          const verb = categoryTitle.split(' ')[1] || categoryTitle.split(' ')[0]; // e.g., DECIR, VENIR
+          // Collect all verb forms for this verb
+          const allVerbForms = [];
+          rows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            if (cells.length >= 2) {
+              const conjugations = cells[1].querySelectorAll('.conjugation');
+              conjugations.forEach(conj => {
+                const fullText = conj.textContent.trim();
+                const parts = fullText.split(' ');
+                if (parts.length >= 2) {
+                  const verbForm = parts.slice(1).join(' ');
+                  if (!allVerbForms.includes(verbForm)) {
+                    allVerbForms.push(verbForm);
+                  }
+                }
+              });
+            }
+          });
+          // Now generate questions
+          rows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            if (cells.length >= 2) {
+              const tense = cells[0].textContent.trim();
+              if (tense !== 'Infinitive' && tense !== 'Gerund' && tense !== 'Participle') {
+                // Use the new structure with .conjugation spans
+                const conjugations = cells[1].querySelectorAll('.conjugation');
+                conjugations.forEach((conj, index) => {
+                  const fullText = conj.textContent.trim();
+                  const parts = fullText.split(' ');
+                  if (parts.length >= 2) {
+                    const person = parts[0]; // yo, vos, él/ella, etc.
+                    const verbForm = parts.slice(1).join(' '); // The actual conjugation
+                    const options = [verbForm];
+                    // Add other conjugations of the same verb
+                    const otherForms = allVerbForms.filter(f => f !== verbForm);
+                    while (options.length < 8 && otherForms.length > 0) {
+                      const randomIndex = Math.floor(Math.random() * otherForms.length);
+                      const randomForm = otherForms.splice(randomIndex, 1)[0];
+                      options.push(randomForm);
+                    }
+                    // If still not enough, add some common wrong (but unlikely)
+                    const commonWrong = ['digo', 'vienes', 'ves', 'das', 'sé', 'pones', 'hablo', 'comes'];
+                    while (options.length < 8) {
+                      const randomForm = commonWrong[Math.floor(Math.random() * commonWrong.length)];
+                      if (!options.includes(randomForm)) {
+                        options.push(randomForm);
+                      }
+                    }
+                    const coloredQuestion = `What is the conjugation of <span style="color: var(--accent); font-weight: bold;">${verb}</span> for <span style="color: var(--accent); font-weight: bold;">${person}</span> in <span style="color: var(--accent); font-weight: bold;">${tense.toLowerCase()}</span>?`;
+                    conjugationQuestions.push({
+                      question: coloredQuestion,
+                      correct: verbForm,
+                      options: shuffleArray(options)
+                    });
+                  }
+                });
+              }
+            }
+          });
+        });
+        // Generate vocabulary questions, separating survival phrases from other vocabulary
+        const allItems = document.querySelectorAll('.item');
+        const allEs = [];
+
+        allItems.forEach(item => {
+          let en, es;
+
+          // Check if item has data attributes (vocabulary section)
+          if (item.hasAttribute('data-en') && item.hasAttribute('data-es')) {
+            en = item.getAttribute('data-en');
+            es = item.getAttribute('data-es');
+          } else {
+            // Parse from span content (survival phrases section)
+            const enSpan = item.querySelector('.en');
+            const esSpan = item.querySelector('.es');
+            if (enSpan && esSpan) {
+              en = enSpan.textContent.trim();
+              es = esSpan.textContent.trim();
+            }
+          }
+
+          if (en && es) {
+            allEs.push(es);
+          }
+        });
+
+        allItems.forEach(item => {
+          let en, es;
+
+          // Check if item has data attributes (vocabulary section)
+          if (item.hasAttribute('data-en') && item.hasAttribute('data-es')) {
+            en = item.getAttribute('data-en');
+            es = item.getAttribute('data-es');
+          } else {
+            // Parse from span content (survival phrases section)
+            const enSpan = item.querySelector('.en');
+            const esSpan = item.querySelector('.es');
+            if (enSpan && esSpan) {
+              en = enSpan.textContent.trim();
+              es = esSpan.textContent.trim();
+            }
+          }
+
+          if (en && es) {
+            // Find the main category title (not subcategory)
+            let categoryEl = item.closest('.category');
+            let categoryTitle = categoryEl.querySelector('.category-title').textContent;
+
+            // If this is a subcategory (has parent category), get the parent title
+            const parentCategory = categoryEl.parentElement?.closest('.category');
+            if (parentCategory) {
+              categoryTitle = parentCategory.querySelector('.category-title').textContent;
+            }
+
+            const options = [es];
+            while (options.length < 8) {
+              const randomEs = allEs[Math.floor(Math.random() * allEs.length)];
+              if (!options.includes(randomEs)) {
+                options.push(randomEs);
+              }
+            }
+            const coloredQuestion = `What is the Spanish for <span style="color: var(--accent); font-weight: bold;">"${en}"</span>?`;
+            const questionObj = {
+              question: coloredQuestion,
+              correct: es,
+              options: shuffleArray(options)
+            };
+
+            // Check if this is a power verb from the vocabulary section
+            const subcategoryEl = item.closest('.category');
+            const subcategoryTitle = subcategoryEl.querySelector('.category-title')?.textContent || '';
+
+            const powerVerbs = ['decir', 'venir', 'ver', 'dar', 'saber', 'poner', 'salir', 'traer', 'oír', 'caer', 'to say', 'to come', 'to see', 'to give', 'to know', 'to put'];
+
+            if (categoryTitle.includes('Survival')) {
+              survivalQuestions.push(questionObj);
+            } else if (subcategoryTitle.includes('More Verbs') || powerVerbs.some(verb => en.toLowerCase().includes(verb.toLowerCase()) || es.toLowerCase().includes(verb.toLowerCase()))) {
+              powerVerbQuestions.push(questionObj);
+            } else if (!categoryTitle.includes('Week 2 Power verbs')) {
               vocabularyQuestions.push(questionObj);
             }
           }
