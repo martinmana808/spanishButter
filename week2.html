@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Week 2 Spanish Learning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/espanol.css">
+  <meta name="theme-color" content="#0f1216">
+</head>
+<body>
+  <div class="desktop-blocker">
+    <p>This page is designed for mobile only. Please view on a phone or resize your window to be narrow.</p>
+  </div>
+
+  <header class="search-header">
+    <div class="search-bar">
+      <input id="searchInput" type="search" placeholder="Search content" autocomplete="off" spellcheck="false" aria-label="Search">
+      <button id="clearBtn" aria-label="Clear search">×</button>
+    </div>
+  </header>
+
+  <main id="content" class="content">
+    <div id="noResults" class="no-results" hidden>No matches. Try a different term.</div>
+
+    <section class="categories" id="categories">
+      <nav>
+        <a href="index.html">Words</a>
+        <a href="regular.html">Regular verbs</a>
+        <a href="week1.html">Week 1</a>
+        <a href="week2.html">Week 2</a>
+      </nav>
+      <div class="test-section">
+        <button id="startTestBtn" class="test-btn">Take a Test (10 Questions)</button>
+      </div>
+      <!-- Verb Conjugations -->
+      <details class="category parent" open>
+        <summary><span class="category-title">Week 2 Power verbs</span></summary>
+        <details class="category">
+          <summary><span class="category-title">1. DECIR (to say/tell)</span></summary>
+          <div class="items">
+            <table style="width:100%; border-collapse: collapse; font-size: 12px;">
+              <tr>
+                <td class="tense-name">Infinitive</td>
+                <td><span class="conjugation">decir</span></td>
+              </tr>
+              <tr>
+                <td class="tense-name">Gerund</td>
+                <td>
+                  <span class="conjugation">diciendo</span>
+                  <div class="highlight">
+                    <strong>estoy diciendo</strong> (I am saying)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Participle</td>
+                <td>
+                  <span class="conjugation">dicho</span>
+                  <div class="highlight">
+                    <strong>he dicho</strong> (I have said)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Present</td>
+                <td>
+                  <span class="conjugation">yo digo</span>
+                  <span class="conjugation">vos decís</span>
+                  <span class="conjugation">él/ella dice</span>
+                  <span class="conjugation">nosotros decimos</span>
+                  <span class="conjugation">ellos/ellas dicen</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Past Simple (finished and blunt)</td>
+                <td>
+                  <span class="conjugation">yo dije</span>
+                  <span class="conjugation">vos dijiste</span>
+                  <span class="conjugation">él/ella dijo</span>
+                  <span class="conjugation">nosotros dijimos</span>
+                  <span class="conjugation">ellos/ellas dijeron</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Past Imperfect (ongoing and abstract)</td>
+                <td>
+                  <span class="conjugation">yo decía</span>
+                  <span class="conjugation">vos decías</span>
+                  <span class="conjugation">él/ella decía</span>
+                  <span class="conjugation">nosotros decíamos</span>
+                  <span class="conjugation">ellos/ellas decían</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Conditional</td>
+                <td>
+                  <span class="conjugation">yo diría</span>
+                  <span class="conjugation">vos dirías</span>
+                  <span class="conjugation">él/ella diría</span>
+                  <span class="conjugation">nosotros diríamos</span>
+                  <span class="conjugation">ellos/ellas dirían</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Future</td>
+                <td>
+                  <span class="conjugation">yo voy a decir</span>
+                  <span class="conjugation">vos vas a decir</span>
+                  <span class="conjugation">él/ella va a decir</span>
+                  <span class="conjugation">nosotros vamos a decir</span>
+                  <span class="conjugation">ellos/ellas van a decir</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">2. VENIR (to come)</span></summary>
+          <div class="items">
+            <table style="width:100%; border-collapse: collapse; font-size: 12px;">
+              <tr>
+                <td class="tense-name">Infinitive</td>
+                <td><span class="conjugation">venir</span></td>
+              </tr>
+              <tr>
+                <td class="tense-name">Gerund</td>
+                <td>
+                  <span class="conjugation">viniendo</span>
+                  <div class="highlight">
+                    <strong>estoy viniendo</strong> (I am coming)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Participle</td>
+                <td>
+                  <span class="conjugation">venido</span>
+                  <div class="highlight">
+                    <strong>he venido</strong> (I have come)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Present</td>
+                <td>
+                  <span class="conjugation">yo vengo</span>
+                  <span class="conjugation">vos venís</span>
+                  <span class="conjugation">él/ella viene</span>
+                  <span class="conjugation">nosotros venimos</span>
+                  <span class="conjugation">ellos/ellas vienen</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Past Simple (finished and blunt)</td>
+                <td>
+                  <span class="conjugation">yo vine</span>
+                  <span class="conjugation">vos viniste</span>
+                  <span class="conjugation">él/ella vino</span>
+                  <span class="conjugation">nosotros vinimos</span>
+                  <span class="conjugation">ellos/ellas vinieron</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Past Imperfect (ongoing and abstract)</td>
+                <td>
+                  <span class="conjugation">yo venía</span>
+                  <span class="conjugation">vos venías</span>
+                  <span class="conjugation">él/ella venía</span>
+                  <span class="conjugation">nosotros veníamos</span>
+                  <span class="conjugation">ellos/ellas venían</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Conditional</td>
+                <td>
+                  <span class="conjugation">yo vendría</span>
+                  <span class="conjugation">vos vendrías</span>
+                  <span class="conjugation">él/ella vendría</span>
+                  <span class="conjugation">nosotros vendríamos</span>
+                  <span class="conjugation">ellos/ellas vendrían</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Future</td>
+                <td>
+                  <span class="conjugation">yo voy a venir</span>
+                  <span class="conjugation">vos vas a venir</span>
+                  <span class="conjugation">él/ella va a venir</span>
+                  <span class="conjugation">nosotros vamos a venir</span>
+                  <span class="conjugation">ellos/ellas van a venir</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">3. VER (to see)</span></summary>
+          <div class="items">
+            <table style="width:100%; border-collapse: collapse; font-size: 12px;">
+              <tr>
+                <td class="tense-name">Infinitive</td>
+                <td><span class="conjugation">ver</span></td>
+              </tr>
+              <tr>
+                <td class="tense-name">Gerund</td>
+                <td>
+                  <span class="conjugation">viendo</span>
+                  <div class="highlight">
+                    <strong>estoy viendo</strong> (I am seeing)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Participle</td>
+                <td>
+                  <span class="conjugation">visto</span>
+                  <div class="highlight">
+                    <strong>he visto</strong> (I have seen)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Present</td>
+                <td>
+                  <span class="conjugation">yo veo</span>
+                  <span class="conjugation">vos ves</span>
+                  <span class="conjugation">él/ella ve</span>
+                  <span class="conjugation">nosotros vemos</span>
+                  <span class="conjugation">ellos/ellas ven</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Past Simple (finished and blunt)</td>
+                <td>
+                  <span class="conjugation">yo vi</span>
+                  <span class="conjugation">vos viste</span>
+                  <span class="conjugation">él/ella vio</span>
+                  <span class="conjugation">nosotros vimos</span>
+                  <span class="conjugation">ellos/ellas vieron</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Past Imperfect (ongoing and abstract)</td>
+                <td>
+                  <span class="conjugation">yo veía</span>
+                  <span class="conjugation">vos veías</span>
+                  <span class="conjugation">él/ella veía</span>
+                  <span class="conjugation">nosotros veíamos</span>
+                  <span class="conjugation">ellos/ellas veían</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Conditional</td>
+                <td>
+                  <span class="conjugation">yo vería</span>
+                  <span class="conjugation">vos verías</span>
+                  <span class="conjugation">él/ella vería</span>
+                  <span class="conjugation">nosotros veríamos</span>
+                  <span class="conjugation">ellos/ellas verían</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Future</td>
+                <td>
+                  <span class="conjugation">yo voy a ver</span>
+                  <span class="conjugation">vos vas a ver</span>
+                  <span class="conjugation">él/ella va a ver</span>
+                  <span class="conjugation">nosotros vamos a ver</span>
+                  <span class="conjugation">ellos/ellas van a ver</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">4. DAR (to give)</span></summary>
+          <div class="items">
+            <table style="width:100%; border-collapse: collapse; font-size: 12px;">
+              <tr>
+                <td class="tense-name">Infinitive</td>
+                <td><span class="conjugation">dar</span></td>
+              </tr>
+              <tr>
+                <td class="tense-name">Gerund</td>
+                <td>
+                  <span class="conjugation">dando</span>
+                  <div class="highlight">
+                    <strong>estoy dando</strong> (I am giving)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Participle</td>
+                <td>
+                  <span class="conjugation">dado</span>
+                  <div class="highlight">
+                    <strong>he dado</strong> (I have given)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Present</td>
+                <td>
+                  <span class="conjugation">yo doy</span>
+                  <span class="conjugation">vos das</span>
+                  <span class="conjugation">él/ella da</span>
+                  <span class="conjugation">nosotros damos</span>
+                  <span class="conjugation">ellos/ellas dan</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Past Simple (finished and blunt)</td>
+                <td>
+                  <span class="conjugation">yo di</span>
+                  <span class="conjugation">vos diste</span>
+                  <span class="conjugation">él/ella dio</span>
+                  <span class="conjugation">nosotros dimos</span>
+                  <span class="conjugation">ellos/ellas dieron</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Past Imperfect (ongoing and abstract)</td>
+                <td>
+                  <span class="conjugation">yo daba</span>
+                  <span class="conjugation">vos dabas</span>
+                  <span class="conjugation">él/ella daba</span>
+                  <span class="conjugation">nosotros dábamos</span>
+                  <span class="conjugation">ellos/ellas daban</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Conditional</td>
+                <td>
+                  <span class="conjugation">yo daría</span>
+                  <span class="conjugation">vos darías</span>
+                  <span class="conjugation">él/ella daría</span>
+                  <span class="conjugation">nosotros daríamos</span>
+                  <span class="conjugation">ellos/ellas darían</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Future</td>
+                <td>
+                  <span class="conjugation">yo voy a dar</span>
+                  <span class="conjugation">vos vas a dar</span>
+                  <span class="conjugation">él/ella va a dar</span>
+                  <span class="conjugation">nosotros vamos a dar</span>
+                  <span class="conjugation">ellos/ellas van a dar</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">5. SABER (to know)</span></summary>
+          <div class="items">
+            <table style="width:100%; border-collapse: collapse; font-size: 12px;">
+              <tr>
+                <td class="tense-name">Infinitive</td>
+                <td><span class="conjugation">saber</span></td>
+              </tr>
+              <tr>
+                <td class="tense-name">Gerund</td>
+                <td>
+                  <span class="conjugation">sabiendo</span>
+                  <div class="highlight">
+                    <strong>estoy sabiendo</strong> (I am knowing)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Participle</td>
+                <td>
+                  <span class="conjugation">sabido</span>
+                  <div class="highlight">
+                    <strong>he sabido</strong> (I have known)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Present</td>
+                <td>
+                  <span class="conjugation">yo sé</span>
+                  <span class="conjugation">vos sabés</span>
+                  <span class="conjugation">él/ella sabe</span>
+                  <span class="conjugation">nosotros sabemos</span>
+                  <span class="conjugation">ellos/ellas saben</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Past Simple (finished and blunt)</td>
+                <td>
+                  <span class="conjugation">yo supe</span>
+                  <span class="conjugation">vos supiste</span>
+                  <span class="conjugation">él/ella supo</span>
+                  <span class="conjugation">nosotros supimos</span>
+                  <span class="conjugation">ellos/ellas supieron</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Past Imperfect (ongoing and abstract)</td>
+                <td>
+                  <span class="conjugation">yo sabía</span>
+                  <span class="conjugation">vos sabías</span>
+                  <span class="conjugation">él/ella sabía</span>
+                  <span class="conjugation">nosotros sabíamos</span>
+                  <span class="conjugation">ellos/ellas sabían</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Conditional</td>
+                <td>
+                  <span class="conjugation">yo sabría</span>
+                  <span class="conjugation">vos sabrías</span>
+                  <span class="conjugation">él/ella sabría</span>
+                  <span class="conjugation">nosotros sabríamos</span>
+                  <span class="conjugation">ellos/ellas sabrían</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Future</td>
+                <td>
+                  <span class="conjugation">yo voy a saber</span>
+                  <span class="conjugation">vos vas a saber</span>
+                  <span class="conjugation">él/ella va a saber</span>
+                  <span class="conjugation">nosotros vamos a saber</span>
+                  <span class="conjugation">ellos/ellas van a saber</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">6. PONER (to put/place)</span></summary>
+          <div class="items">
+            <table style="width:100%; border-collapse: collapse; font-size: 12px;">
+              <tr>
+                <td class="tense-name">Infinitive</td>
+                <td><span class="conjugation">poner</span></td>
+              </tr>
+              <tr>
+                <td class="tense-name">Gerund</td>
+                <td>
+                  <span class="conjugation">poniendo</span>
+                  <div class="highlight">
+                    <strong>estoy poniendo</strong> (I am putting)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Participle</td>
+                <td>
+                  <span class="conjugation">puesto</span>
+                  <div class="highlight">
+                    <strong>he puesto</strong> (I have put)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Present</td>
+                <td>
+                  <span class="conjugation">yo pongo</span>
+                  <span class="conjugation">vos ponés</span>
+                  <span class="conjugation">él/ella pone</span>
+                  <span class="conjugation">nosotros ponemos</span>
+                  <span class="conjugation">ellos/ellas ponen</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Past Simple (finished and blunt)</td>
+                <td>
+                  <span class="conjugation">yo puse</span>
+                  <span class="conjugation">vos pusiste</span>
+                  <span class="conjugation">él/ella puso</span>
+                  <span class="conjugation">nosotros pusimos</span>
+                  <span class="conjugation">ellos/ellas pusieron</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Past Imperfect (ongoing and abstract)</td>
+                <td>
+                  <span class="conjugation">yo ponía</span>
+                  <span class="conjugation">vos ponías</span>
+                  <span class="conjugation">él/ella ponía</span>
+                  <span class="conjugation">nosotros poníamos</span>
+                  <span class="conjugation">ellos/ellas ponían</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Conditional</td>
+                <td>
+                  <span class="conjugation">yo pondría</span>
+                  <span class="conjugation">vos pondrías</span>
+                  <span class="conjugation">él/ella pondría</span>
+                  <span class="conjugation">nosotros pondríamos</span>
+                  <span class="conjugation">ellos/ellas pondrían</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="tense-name">Future</td>
+                <td>
+                  <span class="conjugation">yo voy a poner</span>
+                  <span class="conjugation">vos vas a poner</span>
+                  <span class="conjugation">él/ella va a poner</span>
+                  <span class="conjugation">nosotros vamos a poner</span>
+                  <span class="conjugation">ellos/ellas van a poner</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </details>
+
+        <!-- Notes -->
+        <details class="category notes" open>
+          <summary><span class="category-title">Notes for Elise</span></summary>
+          <div class="items">
+            <ul style="padding-left: 16px; font-size: 12px;">
+              <li>VOS form is bolded in present tense (decís, venís, ves, das, sabés, ponés).</li>
+              <li>Gerund is used with estar: "Estoy diciendo la verdad."</li>
+              <li>Participle is used with haber: "He visto esa película."</li>
+              <li>Future "voy a…" is common: "Voy a decir hola."</li>
+              <li>Saber vs Conocer: Saber for facts/skills, Conocer for people/places.</li>
+            </ul>
+          </div>
+        </details>
+      </details>
+
+      <!-- Survival Phrases -->
+      <details class="category parent" open>
+        <summary><span class="category-title">Survival Phrases (Past & Present Tenses, VOS)</span></summary>
+        <details class="category">
+          <summary><span class="category-title">1. Past Tense Basics</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">¿Qué hiciste ayer?</span> <span class="es">What did you do yesterday?</span></li>
+            <li class="item"><span class="en">Fui al supermercado</span> <span class="es">I went to the supermarket</span></li>
+            <li class="item"><span class="en">Comí pizza</span> <span class="es">I ate pizza</span></li>
+            <li class="item"><span class="en">Vi una película</span> <span class="es">I watched a movie</span></li>
+            <li class="item"><span class="en">Dije hola</span> <span class="es">I said hello</span></li>
+            <li class="item"><span class="en">Vine tarde</span> <span class="es">I came late</span></li>
+            <li class="item"><span class="en">Puse la mesa</span> <span class="es">I set the table</span></li>
+            <li class="item"><span class="en">Supe la noticia</span> <span class="es">I found out the news</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">2. Daily Routines</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">Me levanté temprano</span> <span class="es">I got up early</span></li>
+            <li class="item"><span class="en">Desayuné cereal</span> <span class="es">I had cereal for breakfast</span></li>
+            <li class="item"><span class="en">Fui al trabajo</span> <span class="es">I went to work</span></li>
+            <li class="item"><span class="en">Trabajé todo el día</span> <span class="es">I worked all day</span></li>
+            <li class="item"><span class="en">Almorzé con amigos</span> <span class="es">I had lunch with friends</span></li>
+            <li class="item"><span class="en">Volví a casa</span> <span class="es">I came back home</span></li>
+            <li class="item"><span class="en">Cené temprano</span> <span class="es">I had dinner early</span></li>
+            <li class="item"><span class="en">Me acosté tarde</span> <span class="es">I went to bed late</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">3. Shopping & Money</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">¿Cuánto cuesta esto?</span> <span class="es">How much does this cost?</span></li>
+            <li class="item"><span class="en">Es muy caro</span> <span class="es">It's very expensive</span></li>
+            <li class="item"><span class="en">Compré pan</span> <span class="es">I bought bread</span></li>
+            <li class="item"><span class="en">Pagué con tarjeta</span> <span class="es">I paid with card</span></li>
+            <li class="item"><span class="en">Necesito cambio</span> <span class="es">I need change</span></li>
+            <li class="item"><span class="en">¿Aceptan pesos?</span> <span class="es">Do you accept pesos?</span></li>
+            <li class="item"><span class="en">Di un regalo</span> <span class="es">I gave a gift</span></li>
+            <li class="item"><span class="en">Puse el dinero acá</span> <span class="es">I put the money here</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">4. Travel & Directions</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">Vine en autobús</span> <span class="es">I came by bus</span></li>
+            <li class="item"><span class="en">Fui al aeropuerto</span> <span class="es">I went to the airport</span></li>
+            <li class="item"><span class="en">Vi el mapa</span> <span class="es">I saw the map</span></li>
+            <li class="item"><span class="en">¿Dónde está la estación?</span> <span class="es">Where is the station?</span></li>
+            <li class="item"><span class="en">Sigo derecho</span> <span class="es">I go straight</span></li>
+            <li class="item"><span class="en">Doblé a la izquierda</span> <span class="es">I turned left</span></li>
+            <li class="item"><span class="en">Llegué tarde</span> <span class="es">I arrived late</span></li>
+            <li class="item"><span class="en">Puse el equipaje acá</span> <span class="es">I put the luggage here</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">5. Health & Feelings</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">Me sentí mal</span> <span class="es">I felt bad</span></li>
+            <li class="item"><span class="en">Fui al médico</span> <span class="es">I went to the doctor</span></li>
+            <li class="item"><span class="en">Tuve fiebre</span> <span class="es">I had a fever</span></li>
+            <li class="item"><span class="en">Vi al doctor</span> <span class="es">I saw the doctor</span></li>
+            <li class="item"><span class="en">Dije que me dolía</span> <span class="es">I said it hurt</span></li>
+            <li class="item"><span class="en">Vine a descansar</span> <span class="es">I came to rest</span></li>
+            <li class="item"><span class="en">Puse una compresa</span> <span class="es">I put on a compress</span></li>
+            <li class="item"><span class="en">Supe que estabas enfermo</span> <span class="es">I found out you were sick</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">6. Future Plans</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">Voy a decir la verdad</span> <span class="es">I am going to tell the truth</span></li>
+            <li class="item"><span class="en">Vendré mañana</span> <span class="es">I will come tomorrow</span></li>
+            <li class="item"><span class="en">Veré la película</span> <span class="es">I will see the movie</span></li>
+            <li class="item"><span class="en">Daré un paseo</span> <span class="es">I will take a walk</span></li>
+            <li class="item"><span class="en">Sabré más pronto</span> <span class="es">I will know more soon</span></li>
+            <li class="item"><span class="en">Pondré la mesa</span> <span class="es">I will set the table</span></li>
+            <li class="item"><span class="en">¿Qué harás?</span> <span class="es">What will you do?</span></li>
+            <li class="item"><span class="en">Iremos juntos</span> <span class="es">We will go together</span></li>
+          </ul>
+        </details>
+
+        <details class="category notes" open>
+          <summary><span class="category-title">Tips for Week 2</span></summary>
+          <div class="items">
+            <ul style="padding-left: 16px; font-size: 12px;">
+              <li>Practice past tense by narrating your day: "Me levanté, desayuné..."</li>
+              <li>Use VOS in present: decís, venís, etc.</li>
+              <li>Mix tenses: Present for habits, past for completed actions, future for plans.</li>
+              <li>Listen to native speakers and repeat phrases out loud.</li>
+            </ul>
+          </div>
+        </details>
+      </details>
+
+      <!-- Vocabulary -->
+      <details class="category parent" open>
+        <summary><span class="category-title">Vocabulary – Expanding Foundations</span></summary>
+        <details class="category">
+          <summary><span class="category-title">1. Professions</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">el médico</span> <span class="es">doctor</span></li>
+            <li class="item"><span class="en">la enfermera</span> <span class="es">nurse</span></li>
+            <li class="item"><span class="en">el profesor</span> <span class="es">teacher</span></li>
+            <li class="item"><span class="en">el estudiante</span> <span class="es">student</span></li>
+            <li class="item"><span class="en">el cocinero</span> <span class="es">cook</span></li>
+            <li class="item"><span class="en">el camarero</span> <span class="es">waiter</span></li>
+            <li class="item"><span class="en">el policía</span> <span class="es">police officer</span></li>
+            <li class="item"><span class="en">el abogado</span> <span class="es">lawyer</span></li>
+            <li class="item"><span class="en">el ingeniero</span> <span class="es">engineer</span></li>
+            <li class="item"><span class="en">el artista</span> <span class="es">artist</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">2. Weather</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">el sol</span> <span class="es">sun</span></li>
+            <li class="item"><span class="en">la lluvia</span> <span class="es">rain</span></li>
+            <li class="item"><span class="en">la nieve</span> <span class="es">snow</span></li>
+            <li class="item"><span class="en">el viento</span> <span class="es">wind</span></li>
+            <li class="item"><span class="en">las nubes</span> <span class="es">clouds</span></li>
+            <li class="item"><span class="en">Hace calor</span> <span class="es">It's hot</span></li>
+            <li class="item"><span class="en">Hace frío</span> <span class="es">It's cold</span></li>
+            <li class="item"><span class="en">Está lloviendo</span> <span class="es">It's raining</span></li>
+            <li class="item"><span class="en">Hace sol</span> <span class="es">It's sunny</span></li>
+            <li class="item"><span class="en">Hace viento</span> <span class="es">It's windy</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">3. Body Parts</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">la cabeza</span> <span class="es">head</span></li>
+            <li class="item"><span class="en">los ojos</span> <span class="es">eyes</span></li>
+            <li class="item"><span class="en">la nariz</span> <span class="es">nose</span></li>
+            <li class="item"><span class="en">la boca</span> <span class="es">mouth</span></li>
+            <li class="item"><span class="en">las orejas</span> <span class="es">ears</span></li>
+            <li class="item"><span class="en">el cuello</span> <span class="es">neck</span></li>
+            <li class="item"><span class="en">los brazos</span> <span class="es">arms</span></li>
+            <li class="item"><span class="en">las manos</span> <span class="es">hands</span></li>
+            <li class="item"><span class="en">las piernas</span> <span class="es">legs</span></li>
+            <li class="item"><span class="en">los pies</span> <span class="es">feet</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">4. Emotions</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">feliz</span> <span class="es">happy</span></li>
+            <li class="item"><span class="en">triste</span> <span class="es">sad</span></li>
+            <li class="item"><span class="en">enojado</span> <span class="es">angry</span></li>
+            <li class="item"><span class="en">sorprendido</span> <span class="es">surprised</span></li>
+            <li class="item"><span class="en">asustado</span> <span class="es">scared</span></li>
+            <li class="item"><span class="en">contento</span> <span class="es">content</span></li>
+            <li class="item"><span class="en">nervioso</span> <span class="es">nervous</span></li>
+            <li class="item"><span class="en">calmado</span> <span class="es">calm</span></li>
+            <li class="item"><span class="en">emocionado</span> <span class="es">excited</span></li>
+            <li class="item"><span class="en">aburrido</span> <span class="es">bored</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">5. More Verbs</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">decir</span> <span class="es">to say/tell</span></li>
+            <li class="item"><span class="en">venir</span> <span class="es">to come</span></li>
+            <li class="item"><span class="en">ver</span> <span class="es">to see</span></li>
+            <li class="item"><span class="en">dar</span> <span class="es">to give</span></li>
+            <li class="item"><span class="en">saber</span> <span class="es">to know (facts)</span></li>
+            <li class="item"><span class="en">poner</span> <span class="es">to put/place</span></li>
+            <li class="item"><span class="en">salir</span> <span class="es">to go out</span></li>
+            <li class="item"><span class="en">traer</span> <span class="es">to bring</span></li>
+            <li class="item"><span class="en">oír</span> <span class="es">to hear</span></li>
+            <li class="item"><span class="en">caer</span> <span class="es">to fall</span></li>
+          </ul>
+        </details>
+
+        <details class="category">
+          <summary><span class="category-title">6. More Adjectives</span></summary>
+          <ul class="items">
+            <li class="item"><span class="en">alto</span> <span class="es">tall</span></li>
+            <li class="item"><span class="en">bajo</span> <span class="es">short</span></li>
+            <li class="item"><span class="en">gordo</span> <span class="es">fat</span></li>
+            <li class="item"><span class="en">delgado</span> <span class="es">thin</span></li>
+            <li class="item"><span class="en">joven</span> <span class="es">young</span></li>
+            <li class="item"><span class="en">viejo</span> <span class="es">old</span></li>
+            <li class="item"><span class="en">rico</span> <span class="es">rich/tasty</span></li>
+            <li class="item"><span class="en">pobre</span> <span class="es">poor</span></li>
+            <li class="item"><span class="en">inteligente</span> <span class="es">intelligent</span></li>
+            <li class="item"><span class="en">tonto</span> <span class="es">stupid</span></li>
+          </ul>
+        </details>
+      </details>
+    </section>
+  </main>
+
+  <!-- Quiz Modal -->
+  <div id="quizModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="quizContainer">
+        <h2>Spanish Quiz</h2>
+        <div id="questionContainer">
+          <p id="questionText"></p>
+          <div id="optionsContainer"></div>
+        </div>
+        <div id="resultContainer" style="display: none;">
+          <h3>Your Score: <span id="scoreText"></span></h3>
+          <button id="restartBtn">Test Again</button>
+        </div>
+        <button id="nextBtn" style="display: none;">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simple static search if needed, but for now, placeholder
+    document.getElementById('searchInput').addEventListener('input', function() {
+      // Basic filter can be added later if required
+    });
+  </script>
+  <script defer src="js/espanol.js"></script>
+</body>
+</html>
